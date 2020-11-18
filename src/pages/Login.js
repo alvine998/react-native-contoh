@@ -24,7 +24,7 @@ class Loginlagi extends Component {
                     style={styles.textInputContainerStart}
                 />
                 <TextInput
-                    placeholder={'Password'}
+                    placeholder={'Password'} secureTextEntry={true}
                     style={styles.textInputContainer}
                 />
                 <View style={styles.buttonContainer}>
@@ -53,8 +53,10 @@ const styles = StyleSheet.create({
     textInputContainerStart:{
         borderColor: 'gray',
          borderWidth: 1,
+         borderRadius:10,
         alignItems: 'center',
          justifyContent:'center',
+         textAlign:'center',
         width: 200,
          height: 35,
           padding:10,
@@ -63,6 +65,8 @@ const styles = StyleSheet.create({
     textInputContainer:{
         borderColor: 'gray',
          borderWidth: 1,
+         borderRadius:10,
+         textAlign:'center',
         alignItems: 'center',
          justifyContent:'center',
         width: 200,
