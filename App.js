@@ -26,7 +26,7 @@ import Registrasi from './src/pages/SignUp';
 function App(){
   return (
   
-      <Halaman23/>
+      <Registrasi/>
   
   );
 }
