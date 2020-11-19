@@ -34,7 +34,7 @@ class Loginlagi extends Component {
                 <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>
                 <View style={styles.buttonContainerAlt}>
                     <TouchableOpacity>
-                        <Image source={imgg} style={{width:40, height:40}}/>
+                        <Image source={imgg} style={{width:50, height:40}}/>
                     </TouchableOpacity>
                     <Text>                        </Text>
                     <TouchableOpacity>
