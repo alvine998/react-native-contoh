@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View,Alert,TouchableOpacity , ImageBackground, Text, Image, Button, StyleSheet, TextInput} from 'react-native';
+import {View,Alert,TouchableOpacity , ImageBackground, Text, Image, Button, StyleSheet, TextInput, Linking} from 'react-native';
 // import bgimage from '../images/bg.jpg';
 import Headerin from '../components/Header';
 import imgg from '../images/G.png';
@@ -18,7 +18,7 @@ class Loginlagi extends Component {
         return ( 
             <View style={{flex:1, alignItems:'center', justifyContent:'center', paddingBottom:100, backgroundColor:"#FFFFFF"}}>
                 <Headerin/>
-                <Text style={{textAlign: 'center', justifyContent: 'center', fontFamily:'Iowan Old Style'}}>LOGIN</Text>
+                <Text style={{textAlign: 'center', justifyContent: 'center', fontFamily:'Raleway-Bold'}}>LOGIN</Text>
                 <TextInput
                     placeholder={'Username'}
                     style={styles.textInputContainerStart}
@@ -41,7 +41,8 @@ class Loginlagi extends Component {
                         <Image source={fb} style={{width:40, height:40}}/>
                     </TouchableOpacity>
                 </View>
-                 
+                <Text>{"\n \n You Don't Have Account ?"}</Text>
+                <Text style={{color: 'blue'}} onPress={() => Linking.openURL('')}>Register Here</Text>
             </View>
             
             
