@@ -40,7 +40,7 @@ class Registrasi extends Component {
                     </Form>
                     
                         <Button primary style={{marginLeft: 130, marginTop:20}}>
-                            <Text>            Submit           </Text>
+                            <Text style={{color:'white'}}>            Submit           </Text>
                         </Button>
                         <View style={{marginTop:20}}>
                             <Text style={{textAlign:'center'}}>Already Have an Account?</Text>
