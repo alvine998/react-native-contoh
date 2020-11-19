@@ -41,7 +41,7 @@ class Loginlagi extends Component {
                         <Image source={fb} style={{width:40, height:40}}/>
                     </TouchableOpacity>
                 </View>
-                <Text>{"\n \n You Don't Have Account ?"}</Text>
+                <Text>{"\n \n You Don't Have an Account ?"}</Text>
                 <Text style={{color: 'blue'}} onPress={() => Linking.openURL('')}>Register Here</Text>
             </View>
             

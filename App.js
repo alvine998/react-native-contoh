@@ -26,12 +26,13 @@ import {
 // import HomeScreen from './src/components/Index';
 import Splasher from './src/pages/Splash';
 import Loginlagi from './src/pages/Login';
+import Halaman1 from './src/pages/Introduce1';
 
 
 function App(){
   return (
     <>
-      <Loginlagi/>
+      <Halaman1/>
     </>
   );
 }
