@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -20,6 +20,7 @@ import Splasher from './src/pages/Splash';
 import Loginlagi from './src/pages/Login';
 import Halaman1 from './src/pages/Introduce1';
 import Halaman23 from './src/pages/Introduce2';
+import Registrasi from './src/pages/SignUp';
 
 
 function App(){
