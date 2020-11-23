@@ -17,7 +17,7 @@ export default class Searchbar extends React.Component {
       <SearchBar 
         lightTheme={true} 
         round={true}
-        style={{height:30}}
+        style={{height:0}}
         placeholder="Type Here..."
         onChangeText={this.updateSearch}
         value={search}
