@@ -26,7 +26,7 @@ class Screens extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title>Tutorial Drawer</Title>
+                        <Title>CariKamar</Title>
                     </Body>
                     <Right/>
                 </Header>
