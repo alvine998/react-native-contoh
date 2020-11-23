@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image} from 'react-native';
 import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../components/Sidebar';
 import Searchbar from '../components/SearchBar';
+import img from '../images/htl.png';
+import bag from '../images/kpr.png';
+import newf from '../images/htl-13.png';
+import loggo from '../images/Putih_Full_Horizontal.png';
+import store from '../images/store.png';
+import car from '../images/cart.png';
 
 class Screens extends Component {
     closeDrawer(){
@@ -20,14 +26,14 @@ class Screens extends Component {
                 onClose={() => this.closeDrawer()}
             >
             <Container>
-                <Header>
+                <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
                         <Button transparent onPress={() => this.openDrawer()}>
                             <Icon type={"FontAwesome"} name="bars"/>
                         </Button>
                     </Left>
                     <Body>
-                        <Title>CariKamar</Title>
+                        <Image source={loggo} style={{width:200, height:40, marginLeft:30}} />
                     </Body>
                     <Right/>
                 </Header>
@@ -57,23 +63,41 @@ class Screens extends Component {
                         />
                     </View>
                     <Card>
-                        <CardItem header>
-                            <Text>Home</Text>
-                        </CardItem>
-                        <CardItem>
-                            <Body>
-                                <Text>Ini adalah contoh drawer</Text>
-                            </Body>
-                        </CardItem>
-                        <CardItem footer>
-                            <Text>CariKamar.id</Text>
-                        </CardItem>
+                        <Text style={{textAlign:'center', fontSize:20}}>Main Menu</Text>
+                        <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
+                        <Button primary transparent style={[styles.buttonContainer]}>
+                            <View>
+                                <Image source={img} style={{width:50, height:50, marginLeft:20}} />
+                                <Text style={{marginLeft:27}}>Hotel</Text>
+                            </View> 
+                        </Button>
+                        <Button primary transparent style={[styles.buttonContainer]}>
+                        <View>
+                            <Image source={bag} style={{width:40, height:40, marginLeft:20}} />
+                            <Text style={{color:''}}>Travelling Kit</Text>
+                        </View>
+                        </Button>
+                        </View>
+                        <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
+                        <Button primary transparent style={[styles.buttonContainer]}>
+                            <View>
+                                <Image source={store} style={{width:50, height:50, marginLeft:20}} />
+                                <Text style={{marginLeft:18}}>Souvenir</Text>
+                            </View>    
+                        </Button>
+                        <Button primary transparent style={[styles.buttonContainer]}>
+                            <View>
+                                <Image source={car} style={{width:50, height:50, marginLeft:20}} />
+                                <Text>Pick Up Service</Text>
+                            </View> 
+                        </Button>
+                        </View>
                     </Card>
                 </Content>
-                <Footer>
-                    <FooterTab>
+                <Footer >
+                    <FooterTab style={{backgroundColor:"#229BD7"}}>
                         <Button full>
-                            <Text>Ini Footer Lho</Text>
+                            <Text style={{color:"#FFF"}}>CariKamar.id</Text>
                         </Button>
                     </FooterTab>
                 </Footer>
@@ -83,5 +107,13 @@ class Screens extends Component {
          );
     }
 }
+
+const styles = StyleSheet.create({
+    buttonContainer:{
+        height:60,
+        margin:8,
+        width:150
+    }
+})
  
 export default Screens;

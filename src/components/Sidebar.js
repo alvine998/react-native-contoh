@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Text, TouchableHighlight, StyleSheet, Image} from 'react-native';
 import { Container, Header, Body, Title, Right, Content, Footer, FooterTab, Button } from 'native-base';
+import ggg from '../images/fl.png';
+import fff from '../images/user.png';
 
 export default class SideBar extends Component{
     render() {
@@ -14,10 +16,11 @@ export default class SideBar extends Component{
                 </Header>
                 <Content padder>
                     <TouchableHighlight style={[styles.profileImgContainer, {borderColor:'blue', borderWidth:1, marginLeft:105, marginTop:30}]}>
-                    <Image source={{ uri:"https://www.t-nation.com/system/publishing/articles/10005529/original/6-Reasons-You-Should-Never-Open-a-Gym.png" }} style={styles.profileImg} />
+                    <Image source={ggg} style={styles.profileImg} />
                     </TouchableHighlight>
                     <Text style={{textAlign:'center'}}>Halo, Annisa</Text>
                     <Button primary full style={{marginTop: 50}}>
+                        <Image source={fff} style={{width:30, height:30}} />
                         <Text style={{color:'white'}}>Profile</Text>
                     </Button>
                     <Button primary full style={{marginTop:10}}>
@@ -51,8 +54,8 @@ const styles = StyleSheet.create({
     },
     profileImage:{
         
-        height:80,
-        width:80,
+        height:30,
+        width:30,
         borderRadius:40,
     }
 })
