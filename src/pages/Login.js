@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {View,Alert,TouchableOpacity , ImageBackground, Text, Image, Button, StyleSheet, TextInput, Linking} from 'react-native';
 // import bgimage from '../images/bg.jpg';
+import {Item, Label, Input} from 'native-base';
 import Headerin from '../components/Header';
 import imgg from '../images/G.png';
 import fb from '../images/fb.webp';
@@ -19,14 +20,14 @@ class Loginlagi extends Component {
             <View style={{flex:1, alignItems:'center', justifyContent:'center', paddingBottom:100, backgroundColor:"#FFFFFF"}}>
                 <Headerin/>
                 <Text style={{textAlign: 'center', justifyContent: 'center', fontFamily:'Raleway-Bold'}}>LOGIN</Text>
-                <TextInput
-                    placeholder={'Username'}
-                    style={styles.textInputContainerStart}
-                />
-                <TextInput
-                    placeholder={'Password'} secureTextEntry={true}
-                    style={styles.textInputContainer}
-                />
+                <Item floatingLabel style={{width:250}}>
+                    <Label style={{textAlign: 'left'}}>Email/Phone Number</Label>
+                    <Input />
+                </Item>
+                <Item floatingLabel style={{width:250}}>
+                    <Label style={{textAlign: 'left'}}>Password</Label>
+                    <Input secureTextEntry={true}/>
+                </Item>
                 <View style={styles.buttonContainer}>
                     <Button onPress={this._onPressButton}
                     color={'green'} title='Submit'  />
@@ -34,7 +35,7 @@ class Loginlagi extends Component {
                 <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>
                 <View style={styles.buttonContainerAlt}>
                     <TouchableOpacity>
-                        <Image source={imgg} style={{width:50, height:40}}/>
+                        <Image source={imgg} style={{width:40, height:40}}/>
                     </TouchableOpacity>
                     <Text>                        </Text>
                     <TouchableOpacity>
