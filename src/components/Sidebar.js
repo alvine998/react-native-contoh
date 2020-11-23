@@ -8,9 +8,9 @@ export default class SideBar extends Component{
     render() {
         return(
             <Container>
-                <Header>
+                <Header style={{backgroundColor:"#229BD7"}}>
                     <Body>
-                        <Title>Welcome</Title>
+                        <Title style={{color:"#FFF"}}>Welcome</Title>
                     </Body>
                     <Right/>
                 </Header>
@@ -18,23 +18,23 @@ export default class SideBar extends Component{
                     <TouchableHighlight style={[styles.profileImgContainer, {borderColor:'blue', borderWidth:1, marginLeft:105, marginTop:30}]}>
                     <Image source={ggg} style={styles.profileImg} />
                     </TouchableHighlight>
-                    <Text style={{textAlign:'center'}}>Halo, Annisa</Text>
-                    <Button primary full style={{marginTop: 50}}>
+                    <Text style={{textAlign:'center', fontSize:20, marginTop:10}}>Halo, Annisa</Text>
+                    <Button primary full style={{marginTop: 30, backgroundColor:"#229BD7"}}>
                         <Image source={fff} style={{width:30, height:30}} />
                         <Text style={{color:'white'}}>Profile</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7"}}>
                         <Text style={{color:'white'}}>Saved Booking</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7"}}>
                         <Text style={{color:'white'}}>Travelling Kit</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7"}}>
                         <Text style={{color:'white'}}>Logout</Text>
                     </Button>
                 </Content>
                 <Footer>
-                    <FooterTab>
+                    <FooterTab style={{backgroundColor:"#229BD7"}}>
                         <Button full>
                             <Text>Version 1.0</Text>
                         </Button>
