@@ -21,14 +21,15 @@ import Loginlagi from './src/pages/Login';
 import Halaman1 from './src/pages/Introduce1';
 import Halaman23 from './src/pages/Introduce2';
 import Registrasi from './src/pages/SignUp';
-
+import Screens from './src/pages/Home';
 
 function App(){
   return (
   
-      <Loginlagi/>
+      <Screens/>
   
   );
 }
+
 
 export default App;
