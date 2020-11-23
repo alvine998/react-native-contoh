@@ -65,32 +65,32 @@ class Screens extends Component {
                     <Card>
                         <Text style={{textAlign:'center', fontSize:20}}>Main Menu</Text>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
-                        <Button primary transparent style={[styles.buttonContainer]}>
+                            <Button primary transparent style={[styles.buttonContainer]}>
+                                <View>
+                                    <Image source={img} style={{width:50, height:50, marginLeft:60}} />
+                                    <Text style={{marginLeft:70}}>Hotel</Text>
+                                </View> 
+                            </Button>
+                            <Button primary transparent style={[styles.buttonContainer]}>
                             <View>
-                                <Image source={img} style={{width:50, height:50, marginLeft:20}} />
-                                <Text style={{marginLeft:27}}>Hotel</Text>
-                            </View> 
-                        </Button>
-                        <Button primary transparent style={[styles.buttonContainer]}>
-                        <View>
-                            <Image source={bag} style={{width:40, height:40, marginLeft:20}} />
-                            <Text style={{color:''}}>Travelling Kit</Text>
-                        </View>
-                        </Button>
+                                <Image source={bag} style={{width:40, height:40, marginLeft:35}} />
+                                <Text style={{marginLeft:15}}>Travelling Kit</Text>
+                            </View>
+                            </Button>
                         </View>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
-                        <Button primary transparent style={[styles.buttonContainer]}>
-                            <View>
-                                <Image source={store} style={{width:50, height:50, marginLeft:20}} />
-                                <Text style={{marginLeft:18}}>Souvenir</Text>
-                            </View>    
-                        </Button>
-                        <Button primary transparent style={[styles.buttonContainer]}>
-                            <View>
-                                <Image source={car} style={{width:50, height:50, marginLeft:20}} />
-                                <Text>Pick Up Service</Text>
-                            </View> 
-                        </Button>
+                            <Button primary transparent style={[styles.buttonContainer]}>
+                                <View>
+                                    <Image source={store} style={{width:50, height:50, marginLeft:60}} />
+                                    <Text style={{marginLeft:60}}>Souvenir</Text>
+                                </View>    
+                            </Button>
+                            <Button primary transparent style={[styles.buttonContainer]}>
+                                <View>
+                                    <Image source={car} style={{width:70, height:50, marginLeft:30}} />
+                                    <Text style={{marginLeft:15}}>Pick Up Service</Text>
+                                </View> 
+                            </Button>
                         </View>
                     </Card>
                 </Content>
