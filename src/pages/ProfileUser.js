@@ -43,7 +43,7 @@ class Profil extends Component {
                         <View style={{height:50, backgroundColor:'steelblue'}}>
                             <Text style={{color:"#FFF", fontSize:20, margin:10}}>Your Profile</Text>
                         </View>
-                        <View style={{height:700, backgroundColor:'#d9d9d9'}}>
+                        <View style={{height:700, backgroundColor:'#FFF'}}>
                             <View style={[styles.profileImgContainer, {borderWidth:1, borderColor:'blue', marginLeft:130, marginTop:30}]}>
                                 <Image source={ggg} style={[styles.profileImg, {height:150, width:150}]} />
                             </View>
@@ -63,7 +63,7 @@ class Profil extends Component {
                                 <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>No HP : </Text>
                                 <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>085699556165</Text>
                             </View>
-                            <Button primary full rounded style={{margin:50}}>
+                            <Button primary full rounded style={{margin:50, backgroundColor:'steelblue'}}>
                                 <Text style={{fontSize:20, color:'#FFF'}}>Change</Text>
                             </Button>
                         </View>

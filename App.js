@@ -23,11 +23,13 @@ import Halaman23 from './src/pages/Introduce2';
 import Registrasi from './src/pages/SignUp';
 import Screens from './src/pages/Home';
 import Profil from './src/pages/ProfileUser';
+import UbahProfil from './src/pages/ChangeProfileUser';
+import CariHotel from './src/pages/Hotel/FindHotel';
 
 function App(){
   return (
   
-      <Profil/>
+      <CariHotel/>
   
   );
 }

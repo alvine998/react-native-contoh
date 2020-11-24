@@ -35,44 +35,20 @@ class Screens extends Component {
                     <Body>
                         <Image source={loggo} style={{width:200, height:40, marginLeft:30}} />
                     </Body>
-                    <Right/>
+                    <Right>
+                        <Icon type={"FontAwesome5"} name="search" color="#FFF" />
+                    </Right>
                 </Header>
+                <ScrollView>
+                <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
+                    <Image source={newf} style={{width:200, height:200}} />
+                </View>
                 <Content padder>
-                    <View style={{
-                        flexDirection: "row",
-                        alignItems: "center",
-                        height: 40,
-                        padding: 0,
-                        marginLeft: 2,
-                        marginRight: 2,
-                        marginBottom: 5,
-                        marginTop: 5,
-                        borderWidth: 1,
-                        borderColor: '#161924',
-                        borderRadius: 60,
-                    }}>
-                        <Icon type={"FontAwesome"} name="search" fontSize={25} style={{marginLeft:8}} />
-                        <TextInput
-                            placeholder="Type here ..."
-                            placeholderTextColor={'#161924'}
-                            style={{
-                                fontSize:14,
-                                width: "90%",
-                                padding:2,
-                            }}
-                        />
-                    </View>
                     <Card>
                     </Card>
 
                     <Card>
-                        <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
-                            <Image source={newf} style={{width:200, height:200}} />
-                        </View>
-                    </Card>
-
-                    <Card>
-                        <Text style={{textAlign:'center', fontSize:20}}>Main Menu</Text>
+                        <Text style={{textAlign:'center', fontSize:20}}></Text>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
                             <Button primary transparent style={[styles.buttonContainer]}>
                                 <View>
@@ -107,6 +83,8 @@ class Screens extends Component {
                         <Text style={{fontSize:20, textAlign:'center'}}>News</Text>
                     </Card>
                 </Content>
+                </ScrollView>
+                
                 <Footer >
                     <FooterTab style={{backgroundColor:"#229BD7"}}>
                         <Button full>
