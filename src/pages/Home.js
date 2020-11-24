@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image} from 'react-native';
+import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
 import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../components/Sidebar';
 import Searchbar from '../components/SearchBar';
 import img from '../images/htl.png';
 import bag from '../images/kpr.png';
-import newf from '../images/htl-13.png';
+import newf from '../images/logo.png';
 import loggo from '../images/Putih_Full_Horizontal.png';
 import store from '../images/store.png';
 import car from '../images/cart.png';
@@ -63,6 +63,15 @@ class Screens extends Component {
                         />
                     </View>
                     <Card>
+                    </Card>
+
+                    <Card>
+                        <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
+                            <Image source={newf} style={{width:200, height:200}} />
+                        </View>
+                    </Card>
+
+                    <Card>
                         <Text style={{textAlign:'center', fontSize:20}}>Main Menu</Text>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
                             <Button primary transparent style={[styles.buttonContainer]}>
@@ -92,6 +101,10 @@ class Screens extends Component {
                                 </View> 
                             </Button>
                         </View>
+                    </Card>
+
+                    <Card>
+                        <Text style={{fontSize:20, textAlign:'center'}}>News</Text>
                     </Card>
                 </Content>
                 <Footer >

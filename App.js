@@ -22,11 +22,12 @@ import Halaman1 from './src/pages/Introduce1';
 import Halaman23 from './src/pages/Introduce2';
 import Registrasi from './src/pages/SignUp';
 import Screens from './src/pages/Home';
+import Profil from './src/pages/ProfileUser';
 
 function App(){
   return (
   
-      <Screens/>
+      <Profil/>
   
   );
 }
