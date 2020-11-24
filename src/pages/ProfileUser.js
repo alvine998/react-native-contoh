@@ -10,6 +10,7 @@ import loggo from '../images/Putih_Full_Horizontal.png';
 import store from '../images/store.png';
 import car from '../images/cart.png';
 import ggg from '../images/fl.png';
+import { Actions } from 'react-native-router-flux';
 
 class Profil extends Component {
     closeDrawer(){
@@ -20,6 +21,9 @@ class Profil extends Component {
     };
 
     render() { 
+        const goToChange = () => {
+            Actions.ubahprofil()
+        }
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -64,7 +68,7 @@ class Profil extends Component {
                                 <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>085699556165</Text>
                             </View>
                             <Button primary full rounded style={{margin:50, backgroundColor:'steelblue'}}>
-                                <Text style={{fontSize:20, color:'#FFF'}}>Change</Text>
+                                <Text style={{fontSize:20, color:'#FFF'}} onPress={goToChange}>Change</Text>
                             </Button>
                         </View>
                         

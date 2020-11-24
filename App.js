@@ -26,10 +26,12 @@ import Profil from './src/pages/ProfileUser';
 import UbahProfil from './src/pages/ChangeProfileUser';
 import CariHotel from './src/pages/Hotel/FindHotel';
 
+import Routes from './Routes';
+
 function App(){
   return (
   
-      <CariHotel/>
+      <Routes/>
   
   );
 }

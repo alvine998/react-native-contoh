@@ -10,22 +10,26 @@ import loggo from '../images/Putih_Full_Horizontal.png';
 import store from '../images/store.png';
 import car from '../images/cart.png';
 import ggg from '../images/fl.png';
+import {Actions} from 'react-native-router-flux';
 
 class UbahProfil extends Component {
 
 
-    render() { 
+    render() {
+        const goToProfil = () => {
+            Actions.profil()
+        } 
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left"/>
+                        <Icon type={"FontAwesome5"} name="chevron-left" onPress={goToProfil} />
                     </Left>
                     <Body>
                         <Title>Edit Your Profile</Title>
                     </Body>
                     <Right>
-                        <Icon type={"FontAwesome5"} name="check" />
+                        <Icon type={"FontAwesome5"} name="check" onPress={goToProfil} />
                     </Right>
                 </Header>
                 <View style={{flex:1, flexDirection:'column'}}>
@@ -50,7 +54,8 @@ class UbahProfil extends Component {
                                     marginTop:20,
                                     marginLeft:20,
                                     borderBottomWidth:1,
-                                    borderBottomColor:"#161924"
+                                    borderBottomColor:"#161924",
+                                    fontSize:14
                                 }}
                                 placeholder="Annisa"
                             />
@@ -62,7 +67,8 @@ class UbahProfil extends Component {
                                     height:35, 
                                     width:400,
                                     marginTop:20,
-                                    marginLeft:20
+                                    marginLeft:20,
+                                    fontSize:14
                                 }}
                                 placeholder="annisasamara@gmail.com"
                             />
@@ -75,7 +81,8 @@ class UbahProfil extends Component {
                                     width:400,
                                     marginTop:20,
                                     marginLeft:20,
-                                    borderBottomColor:"black"
+                                    borderBottomColor:"black",
+                                    fontSize:14
                                 }}
                                 placeholder="085699556561"
                             />

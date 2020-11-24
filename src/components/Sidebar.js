@@ -8,9 +8,20 @@ import bag from '../images/travelkit.png';
 import exit from '../images/exit.png';
 import home from '../images/home.png';
 import hotel from '../images/hotel.webp';
+import { Actions } from 'react-native-router-flux';
 
 export default class SideBar extends Component{
     render() {
+        const goToProfil = () => {
+            Actions.profil()
+        }
+        const goToHome = () => {
+            Actions.home()
+        }
+
+        const goToHotel = () => {
+            Actions.carihotel()
+        }
         return(
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
@@ -24,11 +35,11 @@ export default class SideBar extends Component{
                     <Image source={ggg} style={[styles.profileImg, {height:80, width:80}]} />
                     </TouchableHighlight>
                     <Text style={{textAlign:'center', fontSize:20, marginTop:10}}>Halo, Annisa</Text>
-                    <Button primary full style={{marginTop: 30, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                    <Button primary full style={{marginTop: 30, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToHome} >
                         <Image source={home} style={{width:30, height:30}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Home</Text>
                     </Button>
-                    <Button primary full style={{marginTop: 10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                    <Button primary full style={{marginTop: 10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToProfil}>
                         <Image source={fff} style={{width:30, height:30}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Profile</Text>
                     </Button>
@@ -36,7 +47,7 @@ export default class SideBar extends Component{
                         <Image source={save} style={{width:30, height:30}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Saved Booking</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToHotel} >
                         <Image source={hotel} style={{width:40, height:50, marginLeft:8}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:10}}>Find Hotel</Text>
                     </Button>

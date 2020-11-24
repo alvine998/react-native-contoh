@@ -109,16 +109,6 @@ class CariHotel extends Component {
                         </ScrollView>
                     </View>
                 </Content>
-                
-                    
-            
-                <Footer >
-                    <FooterTab style={{backgroundColor:"#229BD7"}}>
-                        <Button full>
-                            <Text style={{color:"#FFF"}}>CariKamar.id</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer>
             </Container>
 
             </Drawer>
