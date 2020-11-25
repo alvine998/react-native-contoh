@@ -22,6 +22,10 @@ export default class SideBar extends Component{
         const goToHotel = () => {
             Actions.carihotel()
         }
+        const goToLogin = () => {
+            Actions.login()
+        }
+
         return(
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
@@ -55,7 +59,7 @@ export default class SideBar extends Component{
                         <Image source={bag} style={{width:30, height:30}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Travelling Kit</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start', alignItems:'flex-start'}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start', alignItems:'flex-start'}} onPress={goToLogin} >
                         <Image source={exit} style={{width:30, height:30}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Logout</Text>
                     </Button>

@@ -5,6 +5,7 @@ import {Item, Label, Input} from 'native-base';
 import Headerin from '../components/Header';
 import imgg from '../images/G.png';
 import fb from '../images/fb.webp';
+import { Actions } from 'react-native-router-flux';
 
     
 class Loginlagi extends Component {
@@ -15,7 +16,9 @@ class Loginlagi extends Component {
       }
     
     render() { 
-        
+        const goToHome = () => {
+            Actions.home()
+        }
         return ( 
             <View style={{flex:1, alignItems:'center', justifyContent:'center', paddingBottom:100, backgroundColor:"#FFFFFF"}}>
                 <Headerin/>
@@ -29,7 +32,7 @@ class Loginlagi extends Component {
                     <Input secureTextEntry={true}/>
                 </Item>
                 <View style={styles.buttonContainer}>
-                    <Button onPress={this._onPressButton}
+                    <Button onPress={goToHome}
                     color={'green'} title='Submit'  />
                 </View>
                 <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>
