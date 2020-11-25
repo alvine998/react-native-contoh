@@ -37,11 +37,24 @@ class CariHotel extends Component {
     renderModal() { 
         return ( 
             <View style={styles.viewModal}>
-                <Text>
-                    {this.state.value && +this.state.value.toFixed(3)}
-                </Text>
+                <View style={{flexDirection:"row"}}>
+                    <View style={{borderBottomWidth:1, marginRight:20}}>
+                        <Text>
+                            {this.state.value && +this.state.value.toFixed(3)}
+                        </Text>
+                    </View>
+                    
+                    <View style={{borderBottomWidth:1, marginLeft:20}}>
+                        <Text style={{padding:10}}>
+                            {this.state.value && +this.state.value.toFixed(3)}
+                        </Text>
+                    </View>
+                </View>
+                
                 <Slider
-                    step={0.5}
+                    step={500}
+                    maximumValue={30000000}
+                    style={styles.slider}
                     {...this.props}
                     onValueChange={value => this.setState({value: value})}
                 />
@@ -190,6 +203,18 @@ const styles = StyleSheet.create({
       },
       textModal: {
         marginVertical: 20,
+      },
+      slider: {
+        width: 300,
+        opacity: 1,
+        height: 50,
+        marginTop: 50,
+      },
+      text: {
+        fontSize: 14,
+        textAlign: 'center',
+        fontWeight: '500',
+        margin: 10,
       },
 })
  
