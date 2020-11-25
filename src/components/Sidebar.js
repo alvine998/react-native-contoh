@@ -8,6 +8,8 @@ import bag from '../images/travelkit.png';
 import exit from '../images/exit.png';
 import home from '../images/home.png';
 import hotel from '../images/hotel.webp';
+import cog from '../images/setting2.png';
+
 import { Actions } from 'react-native-router-flux';
 
 export default class SideBar extends Component{
@@ -40,27 +42,31 @@ export default class SideBar extends Component{
                     </TouchableHighlight>
                     <Text style={{textAlign:'center', fontSize:20, marginTop:10}}>Halo, Annisa</Text>
                     <Button primary full style={{marginTop: 30, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToHome} >
-                        <Image source={home} style={{width:30, height:30}} />
+                        <Image source={home} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Home</Text>
                     </Button>
                     <Button primary full style={{marginTop: 10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToProfil}>
-                        <Image source={fff} style={{width:30, height:30}} />
+                        <Image source={fff} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Profile</Text>
                     </Button>
                     <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
-                        <Image source={save} style={{width:30, height:30}} />
+                        <Image source={save} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Saved Booking</Text>
                     </Button>
                     <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToHotel} >
                         <Image source={hotel} style={{width:40, height:50, marginLeft:8}} />
-                        <Text style={{color:'white', fontSize:20, marginLeft:10}}>Find Hotel</Text>
+                        <Text style={{color:'white', fontSize:20, marginLeft:20}}>Find Hotel</Text>
                     </Button>
                     <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
-                        <Image source={bag} style={{width:30, height:30}} />
+                        <Image source={bag} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Travelling Kit</Text>
                     </Button>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                        <Image source={cog} style={{width:30, height:30, marginLeft:10}} />
+                        <Text style={{color:'white', fontSize:20, marginLeft:25}}>Setting</Text>
+                    </Button>
                     <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start', alignItems:'flex-start'}} onPress={goToLogin} >
-                        <Image source={exit} style={{width:30, height:30}} />
+                        <Image source={exit} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Logout</Text>
                     </Button>
                 </Content>
