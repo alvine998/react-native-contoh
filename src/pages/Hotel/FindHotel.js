@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
-import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
+import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Form } from 'native-base';
 import SideBar from '../../components/Sidebar';
+import Modal from 'react-native-modal';
+import HotelModal from '../../components/ModalHotel';
+import Slider from '@react-native-community/slider';
 
 import loggo from '../../images/Putih_Full_Horizontal.png';
 import cordoba from '../../images/img-hotel/cordoba.webp';
@@ -14,6 +17,48 @@ class CariHotel extends Component {
     openDrawer(){
         this._drawer._root.open()
     };
+
+    state = {
+        isModalVisible: false,
+    };
+
+    toggleModal = () => {
+        this.setState({ isModalVisible: !this.state.isModalVisible});
+    };
+
+    static defaultProps = {
+        value: 0,
+      };
+    
+      state = {
+        value: this.props.value,
+      };
+
+    renderModal() { 
+        return ( 
+            <View style={styles.viewModal}>
+                <Text>
+                    {this.state.value && +this.state.value.toFixed(3)}
+                </Text>
+                <Slider
+                    step={0.5}
+                    {...this.props}
+                    onValueChange={value => this.setState({value: value})}
+                />
+                {/* <View style={{flex:1, flexDirection:"row"}}>
+                    <Form>
+                        
+                    </Form>
+                </View> */}
+                <Text style={styles.textModal}>Done</Text>
+                <Button onPress={this.toggleModal} color="#41A8CC" style={{width:100, marginLeft:100}}>
+                    <Text style={{fontSize:20, color:'#FFF', marginLeft:25}}>Save</Text>
+                </Button>
+            </View>
+         );
+    }
+
+    
 
     render() { 
         return ( 
@@ -38,9 +83,12 @@ class CariHotel extends Component {
                     <View style={{flex:1, flexDirection:"column"}}>
                         <View style={{backgroundColor:"steelblue", height:50}}>
                             <View style={{flexDirection:"row"}}>
-                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} >
+                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} onPress={this.toggleModal} >
                                     <Text style={{marginLeft:27, fontSize:20, color:'#FFF'}}>Filter</Text>
                                 </Button>
+                                <Modal isVisible={this.state.isModalVisible}>
+                                    {this.renderModal()}
+                                </Modal>
                                 <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} >
                                     <Text style={{marginLeft:20, fontSize:20, color:'#FFF'}}>Promo</Text>
                                 </Button>
@@ -121,7 +169,28 @@ const styles = StyleSheet.create({
         height:60,
         margin:8,
         width:150
-    }
+    },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      viewModal: {
+        width: 300,
+        height: 400,
+        backgroundColor: '#FFF',
+        alignSelf: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 10,
+      },
+      image: {
+        width: 150,
+        height: 150,
+      },
+      textModal: {
+        marginVertical: 20,
+      },
 })
  
 export default CariHotel;

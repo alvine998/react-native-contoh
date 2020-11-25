@@ -31,7 +31,7 @@ import Routes from './Routes';
 function App(){
   return (
   
-      <Screens/>
+      <CariHotel/>
   
   );
 }
