@@ -27,11 +27,14 @@ import UbahProfil from './src/pages/ChangeProfileUser';
 import CariHotel from './src/pages/Hotel/FindHotel';
 
 import Routes from './Routes';
+import Filterhotel from './src/pages/Hotel/FilterHotel';
+import Schedulehotel from './src/pages/Hotel/Choose/ScheduleHotel';
+import IndexChooseHotel from './src/pages/Hotel/Choose';
 
 function App(){
   return (
   
-      <CariHotel/>
+      <IndexChooseHotel/>
   
   );
 }

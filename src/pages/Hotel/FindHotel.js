@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
-import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Form } from 'native-base';
+import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../../components/Sidebar';
+import {Actions} from 'react-native-router-flux';
 import Modal from 'react-native-modal';
 import HotelModal from '../../components/ModalHotel';
 import Slider from '@react-native-community/slider';
+
 
 import loggo from '../../images/Putih_Full_Horizontal.png';
 import cordoba from '../../images/img-hotel/cordoba.webp';
@@ -18,62 +20,8 @@ class CariHotel extends Component {
         this._drawer._root.open()
     };
 
-    state = {
-        isModalVisible: false,
-    };
-
-    toggleModal = () => {
-        this.setState({ isModalVisible: !this.state.isModalVisible});
-    };
-
-    static defaultProps = {
-        value: 0,
-      };
-    
-      state = {
-        value: this.props.value,
-      };
-
-    renderModal() { 
-        return ( 
-            <View style={styles.viewModal}>
-                <View style={{flexDirection:"row"}}>
-                    <View style={{borderBottomWidth:1, marginRight:20}}>
-                        <Text>
-                            {this.state.value && +this.state.value.toFixed(3)}
-                        </Text>
-                    </View>
-                    
-                    <View style={{borderBottomWidth:1, marginLeft:20}}>
-                        <Text style={{padding:10}}>
-                            {this.state.value && +this.state.value.toFixed(3)}
-                        </Text>
-                    </View>
-                </View>
-                
-                <Slider
-                    step={500}
-                    maximumValue={30000000}
-                    style={styles.slider}
-                    {...this.props}
-                    onValueChange={value => this.setState({value: value})}
-                />
-                {/* <View style={{flex:1, flexDirection:"row"}}>
-                    <Form>
-                        
-                    </Form>
-                </View> */}
-                <Text style={styles.textModal}>Done</Text>
-                <Button onPress={this.toggleModal} color="#41A8CC" style={{width:100, marginLeft:100}}>
-                    <Text style={{fontSize:20, color:'#FFF', marginLeft:25}}>Save</Text>
-                </Button>
-            </View>
-         );
-    }
-
-    
-
     render() { 
+        
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -105,6 +53,7 @@ class CariHotel extends Component {
                                 <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} >
                                     <Text style={{marginLeft:20, fontSize:20, color:'#FFF'}}>Promo</Text>
                                 </Button>
+                                
                                 <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5}} >
                                     <Text style={{marginLeft:20, fontSize:20, color:'#FFF'}}>Hotel</Text>
                                 </Button>
@@ -171,7 +120,6 @@ class CariHotel extends Component {
                     </View>
                 </Content>
             </Container>
-
             </Drawer>
          );
     }
@@ -201,21 +149,23 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
       },
-      textModal: {
+    
+    textModal: {
         marginVertical: 20,
-      },
-      slider: {
+        },
+    slider: {
         width: 300,
         opacity: 1,
         height: 50,
         marginTop: 50,
-      },
-      text: {
+        },
+    text: {
         fontSize: 14,
         textAlign: 'center',
         fontWeight: '500',
         margin: 10,
-      },
+        },
+
 })
  
 export default CariHotel;

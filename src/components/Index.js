@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
-import SideBar from './Sidebar';
+import SideBar from '../components/Sidebar';
 export default class HomeScreen extends Component {
  
     closeDrawer() {

@@ -18,7 +18,9 @@ class Screens extends Component {
         this._drawer._root.open()
     };
 
+
     render() { 
+        
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -84,7 +86,6 @@ class Screens extends Component {
                     </Card>
                 </Content>
                 </ScrollView>
-                
                 <Footer >
                     <FooterTab style={{backgroundColor:"#229BD7"}}>
                         <Button full>
