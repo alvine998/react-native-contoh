@@ -31,11 +31,13 @@ import Filterhotel from './src/pages/Hotel/FilterHotel';
 import Schedulehotel from './src/pages/Hotel/Choose/ScheduleHotel';
 import IndexChooseHotel from './src/pages/Hotel/Choose';
 import HotelLocation from './src/pages/Hotel/Choose/LocationHotel';
+import Datepicker from './src/components/DatePicker';
+import HotelDuration from './src/pages/Hotel/Choose/DurationHotel';
 
 function App(){
   return (
   
-      <HotelLocation/>
+      <HotelDuration/>
   
   );
 }

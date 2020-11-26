@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 import CalendarPicker from 'react-native-calendar-picker';
  
-
 function disablePastDates(startDate) {
     const startSeconds = Date.parse(startDate);
     return (date) => {
@@ -15,7 +14,7 @@ function disablePastDates(startDate) {
     }
 }
 
-export default class Schedulehotel extends Component {
+export default class Datepicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
