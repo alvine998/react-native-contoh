@@ -33,7 +33,7 @@ class Detailhotel extends Component {
                 </Header>
                 <ScrollView>
                     <View style={{flex:1, flexDirection:"column"}}>
-                        <View style={{height:400, borderBottomWidth:1, borderBottomColor:"#d9d9d9"}}>
+                        <View style={{height:450, borderBottomWidth:1, borderBottomColor:"#d9d9d9"}}>
                             <Image source={hotel1} style={{height:200, width:450}} />
                             <View style={{flexDirection:"row"}}>
                                 <Image source={hotel2} style={{width:100, height:100}} />
@@ -47,7 +47,8 @@ class Detailhotel extends Component {
                             </View>
                             <View style={{flexDirection:"row"}}>
                                 <Text style={{fontSize:20, margin:10}}>Hotel Cordoba</Text>
-                                <Icon type={"FontAwesome5"} name="share-alt" style={{marginTop:13, marginLeft:200, color:"#229BD7"}} />
+                                <Text style={{borderWidth:1, width:50, height:20,marginTop:10, borderColor:"steelblue", textAlign:"center", borderRadius:20, alignItems:"center", justifyContent:"center"}}>Hotel</Text>
+                                <Icon type={"FontAwesome5"} name="share-alt" style={{marginTop:13, marginLeft:140, color:"#229BD7"}} />
                                 <Right>
                                     <Icon type={"FontAwesome5"} name="bookmark" style={{marginTop:13,marginRight:5,height:40, color:"#229BD7"}} />
                                 </Right>
