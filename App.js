@@ -30,11 +30,12 @@ import Routes from './Routes';
 import Filterhotel from './src/pages/Hotel/FilterHotel';
 import Schedulehotel from './src/pages/Hotel/Choose/ScheduleHotel';
 import IndexChooseHotel from './src/pages/Hotel/Choose';
+import HotelLocation from './src/pages/Hotel/Choose/LocationHotel';
 
 function App(){
   return (
   
-      <IndexChooseHotel/>
+      <HotelLocation/>
   
   );
 }

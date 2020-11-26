@@ -83,6 +83,7 @@ class CariHotel extends Component {
                                     fontSize:14,
                                     width: "90%",
                                     padding:2,
+                                    marginLeft:10,
                                 }}
                             />
                         </View>
