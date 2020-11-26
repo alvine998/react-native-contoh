@@ -34,7 +34,7 @@ class IndexChooseHotel extends Component {
                             <Image source={loggo} style={{width:200, height:40, marginLeft:30}} />
                         </Body>
                         <Right>
-                            <Icon type={"FontAwesome5"} name="ellipsis-v" color="#FFF" />
+                            <Icon type={"FontAwesome5"} name="ellipsis-v" style={{color:"#FFF"}} />
                         </Right>
                     </Header>
                     <View style={{flex:1, flexDirection:'column'}}>

@@ -47,9 +47,7 @@ class CariHotel extends Component {
                                 <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} onPress={this.toggleModal} >
                                     <Text style={{marginLeft:27, fontSize:20, color:'#FFF'}}>Filter</Text>
                                 </Button>
-                                <Modal isVisible={this.state.isModalVisible}>
-                                    {this.renderModal()}
-                                </Modal>
+                                
                                 <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} >
                                     <Text style={{marginLeft:20, fontSize:20, color:'#FFF'}}>Promo</Text>
                                 </Button>
@@ -77,10 +75,10 @@ class CariHotel extends Component {
                         }}>
                             <Icon type={"FontAwesome"} name="search" fontSize={25} style={{marginLeft:8}} />
                             <TextInput
-                                placeholder="Type here ..."
+                                placeholder="Cari Hotel lain "
                                 placeholderTextColor={'#161924'}
                                 style={{
-                                    fontSize:14,
+                                    fontSize:20,
                                     width: "90%",
                                     padding:2,
                                     marginLeft:10,

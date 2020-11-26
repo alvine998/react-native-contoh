@@ -33,11 +33,13 @@ import IndexChooseHotel from './src/pages/Hotel/Choose';
 import HotelLocation from './src/pages/Hotel/Choose/LocationHotel';
 import Datepicker from './src/components/DatePicker';
 import HotelDuration from './src/pages/Hotel/Choose/DurationHotel';
+import HotelPerson from './src/pages/Hotel/Choose/PersonHotel'
+import Detailhotel from './src/pages/Hotel/DetailHotel';
 
 function App(){
   return (
   
-      <HotelDuration/>
+      <Detailhotel/>
   
   );
 }
