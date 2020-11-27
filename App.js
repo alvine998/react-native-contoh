@@ -37,10 +37,11 @@ import HotelPerson from './src/pages/Hotel/Choose/PersonHotel'
 import Detailhotel from './src/pages/Hotel/DetailHotel';
 import HotelRoomDetail from './src/pages/Hotel/DetailRoomHotel';
 import HotelBooking from './src/pages/Hotel/BookingHotel';
+import HotelPaymentDetail from './src/pages/Hotel/PaymentDetailHotel';
 
 function App(){
   return (
-      <HotelBooking/>
+      <HotelPaymentDetail/>
   );
 }
 
