@@ -35,12 +35,11 @@ import Datepicker from './src/components/DatePicker';
 import HotelDuration from './src/pages/Hotel/Choose/DurationHotel';
 import HotelPerson from './src/pages/Hotel/Choose/PersonHotel'
 import Detailhotel from './src/pages/Hotel/DetailHotel';
+import HotelRoomDetail from './src/pages/Hotel/DetailRoomHotel';
 
 function App(){
   return (
-  
-      <Detailhotel/>
-  
+      <HotelRoomDetail/>
   );
 }
 
