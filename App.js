@@ -41,10 +41,11 @@ import HotelPaymentDetail from './src/pages/Hotel/PaymentDetailHotel';
 import RequestMenu from './src/pages/Hotel/Booking/AddRequest';
 import DetailContact from './src/pages/Hotel/Booking/ContactDetails';
 import SimpanHotel from './src/pages/Hotel/SavedHotel';
+import Pengaturan from './src/pages/Settings';
 
 function App(){
   return (
-      <SimpanHotel/>
+      <Pengaturan/>
   );
 }
 
