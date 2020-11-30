@@ -39,10 +39,11 @@ import HotelRoomDetail from './src/pages/Hotel/DetailRoomHotel';
 import HotelBooking from './src/pages/Hotel/Booking/BookingHotel';
 import HotelPaymentDetail from './src/pages/Hotel/PaymentDetailHotel';
 import RequestMenu from './src/pages/Hotel/Booking/AddRequest';
+import DetailContact from './src/pages/Hotel/Booking/ContactDetails';
 
 function App(){
   return (
-      <RequestMenu/>
+      <DetailContact/>
   );
 }
 
