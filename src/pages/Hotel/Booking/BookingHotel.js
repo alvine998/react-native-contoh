@@ -2,19 +2,7 @@ import React, { Component } from 'react';
 import{Text, StyleSheet, Image, TextInput, ScrollView, ImageBackground} from 'react-native';
 import {Button, Label, Left, Body, Right, Container, Icon, Header,Title, View, Card, Footer, FooterTab, Content} from 'native-base';
 
-import hotel1 from '../../images/img-hotel/cordoba.webp';
-import hotel2 from '../../images/img-hotel/125011825.jpg';
-import hotel3 from '../../images/img-hotel/isi-2.jpg';
-import hotel4 from '../../images/img-hotel/isi-3.webp';
-import hotel5 from '../../images/img-hotel/isi-4.jpg';
-import save from '../../images/saved-item.png';
-import ac from '../../images/air-conditioner.png';
-import parkir from '../../images/parking-sign.png';
-import wifi from '../../images/wifi.png';
-import eat from '../../images/cutlery.png';
-import beach from '../../images/beach-chair.png';
-import bus from '../../images/bus.png';
-import notes from '../../images/notebook.png';
+
 
 
 

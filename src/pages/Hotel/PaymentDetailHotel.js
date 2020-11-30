@@ -74,7 +74,7 @@ class HotelPaymentDetail extends Component {
                                     <Text >transfer type</Text>
                                 </View>
                                 <Right>
-                                <Icon type={"FontAwesome5"} name="info-circle" style={{marginTop:0, color:"#229BD7"}} />
+                                <Icon type={"FontAwesome5"} name="info-circle" style={{marginTop:0, marginRight:15, color:"#229BD7"}} />
                                 </Right>
                             </View> 
                             <View style={{flexDirection:"row"}}>
@@ -84,7 +84,7 @@ class HotelPaymentDetail extends Component {
                                     <Text >143-100-2247778-8</Text>
                                 </View>
                                 <Right>
-                                    <Text style={{marginTop:0, color:"#229BD7", fontSize:24}}>COPY</Text>
+                                    <Text style={{marginTop:0, color:"#229BD7", fontSize:24, marginRight:10}}>COPY</Text>
                                 </Right>
                             </View> 
                             <View style={{flexDirection:"row", backgroundColor:"#DFDFDF"}}>
@@ -94,7 +94,7 @@ class HotelPaymentDetail extends Component {
                                     <Text >CV. INOVISI ARTHA LAND</Text>
                                 </View>
                                 <Right>
-                                <Image source={mandiri} style={{width:70, height:40, marginTop:0}} />
+                                <Image source={mandiri} style={{width:70, height:40, marginTop:0, marginRight:0}} />
                                 </Right>
                             </View> 
                         </View>
@@ -106,7 +106,7 @@ class HotelPaymentDetail extends Component {
                                 <Text style={{color:"red"}}>Rp. 280.000</Text>
                                 </View>
                                 <Right>
-                                    <Text style={{marginTop:0, color:"#229BD7", fontSize:24}}>COPY</Text>
+                                    <Text style={{marginTop:0, color:"#229BD7", fontSize:24, marginRight:10}}>COPY</Text>
                                 </Right>
                             </View> 
                         </View>

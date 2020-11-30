@@ -36,12 +36,13 @@ import HotelDuration from './src/pages/Hotel/Choose/DurationHotel';
 import HotelPerson from './src/pages/Hotel/Choose/PersonHotel'
 import Detailhotel from './src/pages/Hotel/DetailHotel';
 import HotelRoomDetail from './src/pages/Hotel/DetailRoomHotel';
-import HotelBooking from './src/pages/Hotel/BookingHotel';
+import HotelBooking from './src/pages/Hotel/Booking/BookingHotel';
 import HotelPaymentDetail from './src/pages/Hotel/PaymentDetailHotel';
+import RequestMenu from './src/pages/Hotel/Booking/AddRequest';
 
 function App(){
   return (
-      <HotelPaymentDetail/>
+      <RequestMenu/>
   );
 }
 
