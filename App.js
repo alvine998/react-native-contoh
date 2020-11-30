@@ -45,7 +45,7 @@ import Pengaturan from './src/pages/Settings';
 
 function App(){
   return (
-      <Pengaturan/>
+      <Screens/>
   );
 }
 
