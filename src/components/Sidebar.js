@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, TouchableHighlight, StyleSheet, Image} from 'react-native';
+import {Text, TouchableHighlight, StyleSheet, Image, ToastAndroid} from 'react-native';
 import { Container, Header, Body, Title, Right, Content, Footer, FooterTab, Button } from 'native-base';
 import ggg from '../images/fl.png';
 import fff from '../images/user.png';
@@ -13,6 +13,7 @@ import cog from '../images/setting2.png';
 import { Actions } from 'react-native-router-flux';
 
 export default class SideBar extends Component{
+    
     render() {
         const goToProfil = () => {
             Actions.profil()
@@ -57,7 +58,7 @@ export default class SideBar extends Component{
                         <Image source={hotel} style={{width:40, height:50, marginLeft:8}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:20}}>Find Hotel</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={() => ToastAndroid.show("This Features is not available now!", ToastAndroid.SHORT) }>
                         <Image source={bag} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Travelling Kit</Text>
                     </Button>
