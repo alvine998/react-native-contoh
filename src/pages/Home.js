@@ -11,6 +11,13 @@ import newf from '../images/logo.png';
 import loggo from '../images/Putih_Full_Horizontal.png';
 import store from '../images/store.png';
 import car from '../images/cart.png';
+import trav from '../images/tl2.jpg';
+import trav2 from '../images/tl3.jpg';
+import trav3 from '../images/tl4.jpg';
+import trav4 from '../images/tl5.jpg';
+
+
+
 import FlatListSlider from '../components/FlatlistSlider/FlatlistSlider';
 import BoxSlider from '../components/SliderBox';
 
@@ -53,37 +60,69 @@ class Screens extends Component {
                     <Card>
                         <Text style={{textAlign:'center', fontSize:20}}></Text>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
-                            <Button primary transparent style={[styles.buttonContainer]}>
-                                <View>
-                                    <Image source={img} style={{width:50, height:50, marginLeft:60}} />
-                                    <Text style={{marginLeft:70}}>Hotel</Text>
+                            <Button primary style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                                <View style={{alignItems:"center", justifyContent:"center"}}>
+                                    <Image source={img} style={{width:50, height:50}} />
+                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Hotel</Text>
                                 </View> 
                             </Button>
-                            <Button primary transparent style={[styles.buttonContainer]}>
-                            <View>
-                                <Image source={bag} style={{width:40, height:40, marginLeft:35}} />
-                                <Text style={{marginLeft:15}}>Travelling Kit</Text>
+                            <Button primary transparent style={[styles.buttonContainer,  {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                            <View style={{alignItems:"center", justifyContent:"center"}}>
+                                <Image source={bag} style={{width:40, height:40}} />
+                                <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Travelling Kit</Text>
                             </View>
                             </Button>
                         </View>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
-                            <Button primary transparent style={[styles.buttonContainer]}>
-                                <View>
-                                    <Image source={store} style={{width:50, height:50, marginLeft:60}} />
-                                    <Text style={{marginLeft:60}}>Souvenir</Text>
+                            <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                                <View style={{alignItems:"center", justifyContent:"center"}} >
+                                    <Image source={store} style={{width:50, height:50}} />
+                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Souvenir</Text>
                                 </View>    
                             </Button>
-                            <Button primary transparent style={[styles.buttonContainer]}>
-                                <View>
-                                    <Image source={car} style={{width:70, height:50, marginLeft:30}} />
-                                    <Text style={{marginLeft:15}}>Pick Up Service</Text>
+                            <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                                <View style={{alignItems:"center", justifyContent:"center"}}>
+                                    <Image source={car} style={{width:70, height:50 }} />
+                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Pick Up Service</Text>
                                 </View> 
                             </Button>
                         </View>
                     </Card>
 
                     <Card>
-                        <Text style={{fontSize:20, textAlign:'center'}}>Promo</Text>
+                        <Text style={{fontSize:20, textAlign:'center', marginBottom:10}}>Promo Paket Wisata</Text>
+                        <CardItem cardBody>
+                            <Image source={trav} style={{height:300, width:null, flex:1}} />
+                        </CardItem>
+                        <View style={{alignItems:"center", justifyContent:"center", flexDirection:"row"}}>
+                            <Icon type={"FontAwesome5"} name="thumbs-up" style={{color:"#229BD7"}}/>
+                            <Text style={{fontSize:16}}>35</Text>
+                        </View>
+                        <CardItem cardBody style={{marginTop:20}}>
+                            <Image source={trav2} style={{height:300, width:null, flex:1}} />
+                        </CardItem>
+                        <View style={{alignItems:"center", justifyContent:"center", flexDirection:"row"}}>
+                            <Icon type={"FontAwesome5"} name="thumbs-up" style={{color:"#229BD7"}}/>
+                            <Text style={{fontSize:16}}>35</Text>
+                        </View>
+                        <CardItem cardBody style={{marginTop:20}}>
+                            <Image source={trav3} style={{height:300, width:null, flex:1}} />
+                        </CardItem>
+                        <View style={{alignItems:"center", justifyContent:"center", flexDirection:"row"}}>
+                            <Icon type={"FontAwesome5"} name="thumbs-up" style={{color:"#229BD7"}}/>
+                            <Text style={{fontSize:16}}>35</Text>
+                        </View>
+                        <CardItem cardBody style={{marginTop:20}}>
+                            <Image source={trav4} style={{height:300, width:null, flex:1}} />
+                        </CardItem>
+                        <View style={{alignItems:"center", justifyContent:"center", flexDirection:"row", marginBottom:20}}>
+                            <Icon type={"FontAwesome5"} name="thumbs-up" style={{color:"#229BD7"}}/>
+                            <Text style={{fontSize:16}}>35</Text>
+                        </View>
+                    </Card>
+
+                    <Card>
+
                     </Card>
                 </Content>
                 </ScrollView>
@@ -103,9 +142,9 @@ class Screens extends Component {
 
 const styles = StyleSheet.create({
     buttonContainer:{
-        height:60,
+        height:100,
         margin:8,
-        width:150
+        width:100
     }
 })
  
