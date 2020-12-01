@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
+import { View, Text, TextInput , Dimensions, TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
 import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../components/Sidebar';
 import Searchbar from '../components/SearchBar';
+import Preview from './Preview';
+
 import img from '../images/htl.png';
 import bag from '../images/kpr.png';
 import newf from '../images/logo.png';
 import loggo from '../images/Putih_Full_Horizontal.png';
 import store from '../images/store.png';
 import car from '../images/cart.png';
+import FlatListSlider from '../components/FlatlistSlider/FlatlistSlider';
+
 
 class Screens extends Component {
     closeDrawer(){
@@ -18,9 +22,49 @@ class Screens extends Component {
         this._drawer._root.open()
     };
 
+    constructor (props){
+        super(props);
+        this.state = {
+            data:[
+                {
+                    image :
+                        'https://images.unsplash.com/photo-1567226475328-9d6baaf565cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+                    desc: 
+                        'Silent Waters in the mountains in midst of Himilayas',
+                },
+                {
+                    image:
+                      'https://images.unsplash.com/photo-1455620611406-966ca6889d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1130&q=80',
+                    desc:
+                      'Red fort in India New Delhi is a magnificient masterpeiece of humans',
+                  },
+                  {
+                    image:
+                      'https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                    desc:
+                      'Sample Description below the image for representation purpose only',
+                  },
+                  {
+                    image:
+                      'https://images.unsplash.com/photo-1568700942090-19dc36fab0c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                    desc:
+                      'Sample Description below the image for representation purpose only',
+                  },
+                  {
+                    image:
+                      'https://images.unsplash.com/photo-1584271854089-9bb3e5168e32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80',
+                    desc:
+                      'Sample Description below the image for representation purpose only',
+                  },
+            ],
+        };
+    }
+
 
     render() { 
-        
+
+        const screenWidth = Math.round(Dimensions.get('window').width);
+
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -42,9 +86,20 @@ class Screens extends Component {
                     </Right>
                 </Header>
                 <ScrollView>
-                <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
-                    <Image source={newf} style={{width:200, height:200}} />
-                </View>
+                <FlatListSlider
+                    data={this.state.data}
+                    imageKey={'image'}
+                    timer = {2000}
+                    local = {false}
+                        width = {screenWidth}
+                        separator = {0}
+                        loop = {true}
+                        autoscroll = {true}
+                        currentIndexCallback = {index => console.log('index', index)}
+                        onPress = {item => alert(JSON.stringify(item))}
+                        indicator
+                        animation
+                />
                 <Content padder>
                     <Card>
                     </Card>

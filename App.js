@@ -42,10 +42,11 @@ import RequestMenu from './src/pages/Hotel/Booking/AddRequest';
 import DetailContact from './src/pages/Hotel/Booking/ContactDetails';
 import SimpanHotel from './src/pages/Hotel/SavedHotel';
 import Pengaturan from './src/pages/Settings';
+import Testss from './src/pages/IntroduceFull';
 
 function App(){
   return (
-      <Screens/>
+      <Testss/>
   );
 }
 
