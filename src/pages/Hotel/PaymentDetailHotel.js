@@ -22,17 +22,23 @@ import mandiri from '../../images/bank/mandiri-logo.png';
 import three from '../../images/3-circle.png';
 import footlogo from '../../images/Putih_Full_Horizontal.png';
 
-
-
+import { Actions } from 'react-native-router-flux';
 
 class HotelPaymentDetail extends Component {
     state = {  }
     render() { 
+        const goToBack = () => {
+            Actions.bookinghotel()
+        }
+        const goToHome = () => {
+            Actions.home()
+        }
+
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} />
+                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} onPress={goToBack} />
                     </Left>
                     <Body>
                         <Title>Payment Detail</Title>
@@ -119,7 +125,7 @@ class HotelPaymentDetail extends Component {
                         <View style={{height:100, backgroundColor:"white", marginTop:40}}>
                             <Text style={{textAlign:"center", fontSize:16, color:"grey"}}>Once your payment is confirmed, we will send your receipt</Text>
                             <Text style={{textAlign:"center", fontSize:16, color:"grey"}}>hotel voucher to your email address.</Text>
-                            <Text style={{textAlign:"center", fontSize:20, color:"steelblue", marginTop:30}}>I Have Completed Payment</Text>
+                            <Text style={{textAlign:"center", fontSize:20, color:"steelblue", marginTop:30}} onPress={goToHome}>I Have Completed Payment</Text>
                         </View>
                     </View>
                     <Footer style={{height:50}}>

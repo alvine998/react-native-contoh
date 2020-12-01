@@ -20,6 +20,8 @@ import trav4 from '../images/tl5.jpg';
 
 import FlatListSlider from '../components/FlatlistSlider/FlatlistSlider';
 import BoxSlider from '../components/SliderBox';
+import { Actions } from 'react-native-router-flux';
+
 
 
 class Screens extends Component {
@@ -31,6 +33,9 @@ class Screens extends Component {
     };
 
     render() { 
+        const goToHotel = () => {
+            Actions.choose()
+        }
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -58,9 +63,9 @@ class Screens extends Component {
                     </Card>
 
                     <Card>
-                        <Text style={{textAlign:'center', fontSize:20}}></Text>
+                        <Text style={{textAlign:'center', fontSize:20, marginTop:10}}>Main Menu</Text>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
-                            <Button primary style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                            <Button primary style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]} onPress={goToHotel}>
                                 <View style={{alignItems:"center", justifyContent:"center"}}>
                                     <Image source={img} style={{width:50, height:50}} />
                                     <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Hotel</Text>
@@ -73,7 +78,7 @@ class Screens extends Component {
                             </View>
                             </Button>
                         </View>
-                        <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
+                        <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center', marginBottom:20}}>
                             <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
                                 <View style={{alignItems:"center", justifyContent:"center"}} >
                                     <Image source={store} style={{width:50, height:50}} />

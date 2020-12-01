@@ -6,7 +6,8 @@ import {
   View
 } from 'react-native';
 import CalendarPicker from 'react-native-calendar-picker';
- 
+import { Actions } from 'react-native-router-flux';
+
 
 function disablePastDates(startDate) {
     const startSeconds = Date.parse(startDate);
@@ -32,6 +33,9 @@ export default class Schedulehotel extends Component {
 
   
   render() {
+    const goToBack = () => {
+      Actions.choose()
+  }
     const { selectedStartDate } = this.state;
     const startDate = selectedStartDate ? selectedStartDate.toString() : '';
     return (

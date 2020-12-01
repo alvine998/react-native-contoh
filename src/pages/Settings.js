@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import {View, Text, Image, TouchableHighlight} from 'react-native';
 import {Header, Container, Left, Right, Body, Icon, Title, Content, Button} from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 class Pengaturan extends Component {
     state = {  }
     render() { 
+        const goToHome = () => {
+            Actions.home()
+        }
+
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} />
+                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} onPress={goToHome}/>
                     </Left>
                     <Body>
                         <Title>Setting</Title>

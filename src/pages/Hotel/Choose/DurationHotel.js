@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import{Text, StyleSheet, Image, TextInput, ScrollView} from 'react-native';
 import {Button,Drawer, Label, Left, Body, Right, Container, Icon, Header, Title, Content, View} from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 class HotelDuration extends Component {
     state = {  }
     render() { 
+        const goToBack = () => {
+            Actions.choose()
+        }
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} />
+                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} onPress={goToBack} />
                     </Left>
                     <Body>
                         <Title>Stay Duration</Title>
                     </Body>
                     <Right>
-                    <Icon type={"FontAwesome5"} name="check" style={{color:"#FFF"}} />
+                    <Icon type={"FontAwesome5"} name="check" style={{color:"#FFF"}} onPress={goToBack} />
                     </Right>
                 </Header>
                 <View style={{flex:1, flexDirection:'column'}}>

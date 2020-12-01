@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import{Text, StyleSheet, Image, TextInput, ScrollView, ImageBackground} from 'react-native';
+import{Text, StyleSheet, Image, TextInput, ScrollView, ImageBackground, TouchableOpacity} from 'react-native';
 import {Button, Label, Left, Body, Right, Container, Icon, Header,Title, View, Card, Footer, FooterTab, Content} from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 
 
@@ -8,12 +9,25 @@ import {Button, Label, Left, Body, Right, Container, Icon, Header,Title, View, C
 
 class HotelBooking extends Component {
     state = {  }
-    render() { 
+    render() {
+        const goToBack = () => {
+            Actions.detailroom()
+        }
+        const goToContact = () => {
+            Actions.contactdetail()
+        } 
+        const goToRequest = () => {
+            Actions.addrequest()
+        }
+        const goToPayment = () => {
+            Actions.payment()
+        }
+
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} />
+                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} onPress={goToBack} />
                     </Left>
                     <Body>
                         <Title>Booking Detail</Title>
@@ -60,6 +74,7 @@ class HotelBooking extends Component {
                                 <Text style={{fontSize:16, marginLeft:250, marginTop:3, color:"blue"}}>Info</Text>
                             </View>
                         </View>
+                        
                         <View style={{margin:10}}>
                             <Card style={{backgroundColor:"#d9d9d9", height:100}}>
                                 <Text style={{marginLeft:10, marginTop:10, fontSize:16}}>Enjoy the benefit of filling your details quickly </Text>
@@ -74,15 +89,20 @@ class HotelBooking extends Component {
                             <Text style={{fontSize:16}}>Contact Details (for E-Ticket/Voucher</Text>
                         </View>
                         
+                        <TouchableOpacity onPress={goToContact}>
                         <View style={{height:45, backgroundColor:"#d9d9d9", marginTop:10, flexDirection:"row"}}>
                             <Text style={{fontSize:16, margin:10, color:"#229BD7"}}>FILL IN CONTACT DETAILS</Text>
                             <Icon type={"FontAwesome5"} name="chevron-right" style={{color:"#229BD7", marginLeft:170, width:30, height:30, marginTop:7}} />
                         </View>
+                        </TouchableOpacity>
                         
+                        <TouchableOpacity onPress={goToRequest}>
                         <View style={{height:45, backgroundColor:"#d9d9d9", marginTop:20, flexDirection:"row"}}>
                             <Text style={{fontSize:16, margin:10, color:"#229BD7"}}>Add Special Request(s)</Text>
                             <Icon type={"FontAwesome5"} name="chevron-right" style={{color:"#229BD7", marginLeft:195, width:30, height:30, marginTop:7}} />
-                        </View>
+                        </View> 
+                        </TouchableOpacity>
+                        
 
                         <View style={{height:50, backgroundColor:"#d9d9d9", marginTop:20}}>
                             <View style={{flexDirection:"row"}}>
@@ -97,7 +117,7 @@ class HotelBooking extends Component {
                         </View>
                         
                         <View style={{margin:10}}>
-                            <Button warning style={{backgroundColor:"#F96E46", width:410, alignItems:"center", justifyContent:"center"}}>
+                            <Button warning style={{backgroundColor:"#F96E46", width:410, alignItems:"center", justifyContent:"center"}} onPress={goToPayment}>
                                 <Text style={{fontSize:20, color:"#FFF"}}>Continue</Text>
                             </Button>
                         </View>

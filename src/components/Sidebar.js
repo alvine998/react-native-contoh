@@ -23,10 +23,16 @@ export default class SideBar extends Component{
         }
 
         const goToHotel = () => {
-            Actions.carihotel()
+            Actions.choose()
         }
         const goToLogin = () => {
             Actions.login()
+        }
+        const goToBooking = () => {
+            Actions.savedbooking()
+        }
+        const goToSetting = () => {
+            Actions.setting()
         }
 
         return(
@@ -50,7 +56,7 @@ export default class SideBar extends Component{
                         <Image source={fff} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Profile</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToBooking}>
                         <Image source={save} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Saved Booking</Text>
                     </Button>
@@ -62,7 +68,7 @@ export default class SideBar extends Component{
                         <Image source={bag} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Travelling Kit</Text>
                     </Button>
-                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}}>
+                    <Button primary full style={{marginTop:10, backgroundColor:"#229BD7", justifyContent:'flex-start'}} onPress={goToSetting}>
                         <Image source={cog} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25}}>Setting</Text>
                     </Button>

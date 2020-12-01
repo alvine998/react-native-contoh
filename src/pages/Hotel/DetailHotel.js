@@ -15,16 +15,26 @@ import eat from '../../images/cutlery.png';
 import beach from '../../images/beach-chair.png';
 import bus from '../../images/bus.png';
 
+import { Actions } from 'react-native-router-flux';
+
+
 
 
 class Detailhotel extends Component {
     state = {  }
     render() { 
+        const goToBack = () => {
+            Actions.carihotel()
+        }
+        const goToDetailRoom = () => {
+            Actions.detailroom()
+        }
+
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} />
+                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} onPress={goToBack}/>
                     </Left>
                     <Body>
                         <Title>Detail Hotel</Title>
@@ -127,7 +137,7 @@ class Detailhotel extends Component {
                         <Text style={{fontSize:24, color:"#F96E46"}}>Rp. 280.000</Text>
                     </Body>
                     <Right style={{marginRight:10}}>
-                        <Button style={{backgroundColor:"#F96E46", borderRadius:10, width:100, alignItems:"center", justifyContent:"center"}} >
+                        <Button style={{backgroundColor:"#F96E46", borderRadius:10, width:100, alignItems:"center", justifyContent:"center"}} onPress={goToDetailRoom}>
                             <Text style={{color:"#FFF"}}>Select Room</Text>
                         </Button>
                     </Right>

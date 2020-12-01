@@ -47,7 +47,7 @@ import BoxSlider from './src/components/SliderBox';
 
 function App(){
   return (
-      <Screens/>
+      <Routes/>
   );
 }
 

@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import{Text, StyleSheet, Image, TextInput, ScrollView} from 'react-native';
 import {Button,Drawer, Label, Left, Body, Right, Container, Icon, Header, Title, Content, View} from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 class HotelLocation extends Component {
     state = {  }
     render() { 
+        const goToBack = () => {
+            Actions.choose()
+        }
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" />
+                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} onPress={goToBack}/>
                     </Left>
                     <Body>
                         <Title>Select Location</Title>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, View, StyleSheet, Text, Dimensions, Platform} from 'react-native';
+import {Image, View, StyleSheet, Text, Dimensions, Platform, ToastAndroid} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {SliderBox} from 'react-native-image-slider-box';
 import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';

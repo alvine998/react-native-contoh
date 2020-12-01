@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
+import { View, Text, TextInput , TouchableHighlight, StyleSheet, Image, ScrollView, TouchableOpacity} from 'react-native';
 import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../../components/Sidebar';
 import {Actions} from 'react-native-router-flux';
@@ -21,7 +21,9 @@ class CariHotel extends Component {
     };
 
     render() { 
-        
+        const goToDetailHotel = () => {
+            Actions.detailhotel()
+        }
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -44,19 +46,19 @@ class CariHotel extends Component {
                     <View style={{flex:1, flexDirection:"column"}}>
                         <View style={{backgroundColor:"steelblue", height:50}}>
                             <View style={{flexDirection:"row"}}>
-                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} onPress={this.toggleModal} >
-                                    <Text style={{marginLeft:27, fontSize:20, color:'#FFF'}}>Filter</Text>
+                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} onPress={this.toggleModal} >
+                                    <Text style={{fontSize:20, color:'#FFF'}}>Filter</Text>
                                 </Button>
                                 
-                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5}} >
-                                    <Text style={{marginLeft:20, fontSize:20, color:'#FFF'}}>Promo</Text>
+                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} >
+                                    <Text style={{fontSize:20, color:'#FFF', textAlign:"center"}}>Area</Text>
                                 </Button>
                                 
-                                <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5}} >
-                                    <Text style={{marginLeft:20, fontSize:20, color:'#FFF'}}>Hotel</Text>
+                                <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} >
+                                    <Text style={{fontSize:20, color:'#FFF'}}>Hotel</Text>
                                 </Button>
-                                <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5}} >
-                                    <Text style={{marginLeft:25, fontSize:20, color:'#FFF'}}>Villa</Text>
+                                <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} >
+                                    <Text style={{fontSize:20, color:'#FFF'}}>Villa</Text>
                                 </Button>
                             </View>
                         </View>
@@ -90,30 +92,32 @@ class CariHotel extends Component {
                                 
                             </View> */}
 
+                            <TouchableOpacity onPress={goToDetailHotel}>
                             <Card>
-                            <View style={{flex:1, flexDirection:"row"}}>
-                            <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
+                                <View style={{flex:1, flexDirection:"row"}}>
+                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
                                     <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
-                            </View>
-                                       
+                                </View>                                      
+                            </Card>
+                            </TouchableOpacity>
+                            
+                            <Card>
+                                <View style={{flex:1, flexDirection:"row"}}>
+                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
+                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
+                                </View>                                      
                             </Card>
                             <Card>
                                 <View style={{flex:1, flexDirection:"row"}}>
                                     <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:20, marginLeft:10}}>Hotel Cordoba</Text>
-                                </View>
+                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
+                                </View>                                     
                             </Card>
                             <Card>
                                 <View style={{flex:1, flexDirection:"row"}}>
                                     <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:20, marginLeft:10}}>Hotel Cordoba</Text>
-                                </View>
-                            </Card>
-                            <Card>
-                                <View style={{flex:1, flexDirection:"row"}}>
-                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:20, marginLeft:10}}>Hotel Cordoba</Text>
-                                </View>
+                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
+                                </View>    
                             </Card>
                         </ScrollView>
                     </View>

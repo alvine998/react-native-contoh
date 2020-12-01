@@ -16,16 +16,25 @@ import beach from '../../images/beach-chair.png';
 import bus from '../../images/bus.png';
 import notes from '../../images/notebook.png';
 
+import { Actions } from 'react-native-router-flux';
+
+
 
 
 class HotelRoomDetail extends Component {
     state = {  }
-    render() { 
+    render() {
+        const goToBack = () => {
+            Actions.detailhotel()
+        } 
+        const goToBooking = () => {
+            Actions.bookinghotel()
+        }
         return ( 
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}} />
+                        <Icon type={"FontAwesome5"} onPress={goToBack} name="chevron-left" style={{color:"#FFF"}} />
                     </Left>
                     <Body>
                         <Title>Detail Room</Title>
@@ -87,7 +96,7 @@ class HotelRoomDetail extends Component {
                                 </View>
                                 <Right>
                                     <Button warning style={{width:100, borderRadius:10, alignItems:"center", marginLeft:250,                
-                                    justifyContent:"center", backgroundColor:"#F96E46", marginTop:20}}>
+                                    justifyContent:"center", backgroundColor:"#F96E46", marginTop:20}} onPress={goToBooking}>
                                         <Text style={{fontSize:18, color:"#FFF"}}>Select</Text>
                                     </Button>
                                 </Right>
@@ -124,7 +133,7 @@ class HotelRoomDetail extends Component {
                                 </View>
                                 <Right>
                                     <Button warning style={{width:100, borderRadius:10, alignItems:"center", marginLeft:250,                
-                                    justifyContent:"center", backgroundColor:"#F96E46", marginTop:20}}>
+                                    justifyContent:"center", backgroundColor:"#F96E46", marginTop:20}} onPress={goToBooking}>
                                         <Text style={{fontSize:18, color:"#FFF"}}>Select</Text>
                                     </Button>
                                 </Right>
