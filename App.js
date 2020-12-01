@@ -43,10 +43,11 @@ import DetailContact from './src/pages/Hotel/Booking/ContactDetails';
 import SimpanHotel from './src/pages/Hotel/SavedHotel';
 import Pengaturan from './src/pages/Settings';
 import Testss from './src/pages/IntroduceFull';
+import BoxSlider from './src/components/SliderBox';
 
 function App(){
   return (
-      <Testss/>
+      <Screens/>
   );
 }
 

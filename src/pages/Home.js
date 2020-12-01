@@ -12,6 +12,7 @@ import loggo from '../images/Putih_Full_Horizontal.png';
 import store from '../images/store.png';
 import car from '../images/cart.png';
 import FlatListSlider from '../components/FlatlistSlider/FlatlistSlider';
+import BoxSlider from '../components/SliderBox';
 
 
 class Screens extends Component {
@@ -22,49 +23,7 @@ class Screens extends Component {
         this._drawer._root.open()
     };
 
-    constructor (props){
-        super(props);
-        this.state = {
-            data:[
-                {
-                    image :
-                        'https://images.unsplash.com/photo-1567226475328-9d6baaf565cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
-                    desc: 
-                        'Silent Waters in the mountains in midst of Himilayas',
-                },
-                {
-                    image:
-                      'https://images.unsplash.com/photo-1455620611406-966ca6889d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1130&q=80',
-                    desc:
-                      'Red fort in India New Delhi is a magnificient masterpeiece of humans',
-                  },
-                  {
-                    image:
-                      'https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-                    desc:
-                      'Sample Description below the image for representation purpose only',
-                  },
-                  {
-                    image:
-                      'https://images.unsplash.com/photo-1568700942090-19dc36fab0c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-                    desc:
-                      'Sample Description below the image for representation purpose only',
-                  },
-                  {
-                    image:
-                      'https://images.unsplash.com/photo-1584271854089-9bb3e5168e32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80',
-                    desc:
-                      'Sample Description below the image for representation purpose only',
-                  },
-            ],
-        };
-    }
-
-
     render() { 
-
-        const screenWidth = Math.round(Dimensions.get('window').width);
-
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -86,20 +45,7 @@ class Screens extends Component {
                     </Right>
                 </Header>
                 <ScrollView>
-                <FlatListSlider
-                    data={this.state.data}
-                    imageKey={'image'}
-                    timer = {2000}
-                    local = {false}
-                        width = {screenWidth}
-                        separator = {0}
-                        loop = {true}
-                        autoscroll = {true}
-                        currentIndexCallback = {index => console.log('index', index)}
-                        onPress = {item => alert(JSON.stringify(item))}
-                        indicator
-                        animation
-                />
+                <BoxSlider/>
                 <Content padder>
                     <Card>
                     </Card>
@@ -137,7 +83,7 @@ class Screens extends Component {
                     </Card>
 
                     <Card>
-                        <Text style={{fontSize:20, textAlign:'center'}}>News</Text>
+                        <Text style={{fontSize:20, textAlign:'center'}}>Promo</Text>
                     </Card>
                 </Content>
                 </ScrollView>
