@@ -39,6 +39,9 @@ class Screens extends Component {
         const goToPickUp = () => {
             Actions.pickup()
         }
+        const goToSouvenir = () => {
+            Actions.introsouvenir()
+        }
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -82,7 +85,7 @@ class Screens extends Component {
                             </Button>
                         </View>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center', marginBottom:20}}>
-                            <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                            <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]} onPress={goToSouvenir}>
                                 <View style={{alignItems:"center", justifyContent:"center"}} >
                                     <Image source={store} style={{width:50, height:50}} />
                                     <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Souvenir</Text>

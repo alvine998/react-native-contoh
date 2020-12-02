@@ -23,6 +23,8 @@ import Testss from './src/pages/IntroduceFull';
 import Splasher from './src/pages/Splash';
 import Registrasi from './src/pages/SignUp';
 import Pickup from './src/pages/PickUpService';
+import IntroSouvenir from './src/pages/Souvenir/intro';
+import ScreenSouvenir from './src/pages/Souvenir';
 
 const Routes = () => {
     return ( 
@@ -51,6 +53,8 @@ const Routes = () => {
                 <Stack key="splash" component={Splasher} hideNavBar={true}/>
                 <Stack key="regis" component={Registrasi} hideNavBar={true}/>
                 <Stack key="pickup" component={Pickup} hideNavBar={true}/>
+                <Stack key="introsouvenir" component={IntroSouvenir} hideNavBar={true}/>
+                <Stack key="souvenir" component={ScreenSouvenir} hideNavBar={true}/>
 
                 
             </Stack>
