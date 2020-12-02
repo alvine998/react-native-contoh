@@ -3,6 +3,10 @@ import {Image, View, StyleSheet, Text, Dimensions} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions'
 import App from '../../App';
+import { Actions, Stack } from 'react-native-router-flux';
+import Loginlagi from './Login';
+import Routes from '../../Routes';
+
 
 const styles = StyleSheet.create({
     mainContent: {
@@ -19,11 +23,13 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent',
       textAlign: 'center',
       paddingHorizontal: 16,
-      marginTop: responsiveHeight(-2)
+      marginTop: responsiveHeight(-2),
+      fontSize:20,
+      marginTop:10,
   
     },
     title: {
-      fontSize: 22,
+      fontSize: 26,
       color: '#555',
       backgroundColor: 'transparent',
       textAlign: 'center',
@@ -36,29 +42,42 @@ const styles = StyleSheet.create({
 const slides = [
     {
         key:'key1',
-        title:'Title1',
-        text:'Slides 1',
-        image: require('../images/tl1.jpg'),
+        title:'Welcome To CariKamar',
+        text:'',
+        image: require('../images/logo.png'),
         backgroundColor:'#27ae60',
     },
     {
         key:'key2',
-        title:'Title2',
-        text:'Slides 2',
+        title:'Bukan Platform Biasa',
+        text:'Cari Penginapan Terbaik Kapanpun Dimanapun',
         image: require('../images/tl1.jpg'),
         backgroundColor:'#27ae60',
     },
     {
         key:'key3',
-        title:'Title3',
-        text:'Slides 3',
-        image: require('../images/tl1.jpg'),
+        title:'Pick Up Service',
+        text:'Dimanapun Kamu Berada Kami Akan Siap Jemput Kamu Menuju Hotel',
+        image: require('../images/cart.png'),
         backgroundColor:'#27ae60',
     },
 ];
 
 class Testss extends Component {
-    
+ 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showRealApp: false
+    }
+  }
+
+  _onDone = () => {
+    alert('Selamat Bersenang-senang :)');
+    this.setState({ showRealApp: true });
+  }
+
     _renderItem = ({ item }) => {
         return(
             <View
@@ -76,8 +95,8 @@ class Testss extends Component {
             >
                 <Image source={item.image} style={{width:360, height:360}} resizeMode='contain' />
                 <View>
-                    <Text style={styles.title}>Judul ke 1 {item.title}</Text>
-                    <Text style={styles.text} >Text:{item.text} </Text>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.text} >{item.text} </Text>
                 </View>
                 
                 
@@ -86,21 +105,28 @@ class Testss extends Component {
     }
 
     render() { 
+      const goToLogin = () => {
+        Actions.login()
+    }
+    if (this.state.showRealApp){
+      return <Routes/>;
+    } else {
+      return (   
+        <AppIntroSlider 
+            data={slides}
+            renderItem={this._renderItem}
+            showPrevButton
+            showNextButton
+            dotStyle={{backgroundColor:"#DDD"}}
+            activeDotStyle={{backgroundColor:"green"}}
+            renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Next</Text>) }}
+            renderPrevButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Back</Text>) }}
+            renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'black' }}>Done</Text>) }}
+            onDone={this._onDone}
+            />
+     );
+    }
         
-        return ( 
-            <AppIntroSlider 
-                data={slides}
-                renderItem={this._renderItem}
-                showPrevButton
-                showNextButton
-                dotStyle={{backgroundColor:"#DDD"}}
-                activeDotStyle={{backgroundColor:"green"}}
-                renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Next</Text>) }}
-                renderPrevButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Back</Text>) }}
-                renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'black' }}>Done</Text>) }}
-                onDone={() => alert('Done')}
-                />
-         );
     }
 }
  

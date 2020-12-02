@@ -19,6 +19,9 @@ class Loginlagi extends Component {
         const goToHome = () => {
             Actions.home()
         }
+        const goToSignup = () => {
+            Actions.regis()
+        }
         return ( 
             <View style={{flex:1, alignItems:'center', justifyContent:'center', paddingBottom:100, backgroundColor:"#FFFFFF"}}>
                 <Headerin/>
@@ -46,7 +49,7 @@ class Loginlagi extends Component {
                     </TouchableOpacity>
                 </View>
                 <Text>{"\n \n You Don't Have an Account ?"}</Text>
-                <Text style={{color: 'blue'}} onPress={() => Linking.openURL('')}>Register Here</Text>
+                <Text style={{color: 'blue'}} onPress={goToSignup}>Register Here</Text>
             </View>
             
             
