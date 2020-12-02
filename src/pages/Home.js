@@ -36,6 +36,9 @@ class Screens extends Component {
         const goToHotel = () => {
             Actions.choose()
         }
+        const goToPickUp = () => {
+            Actions.pickup()
+        }
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -85,7 +88,7 @@ class Screens extends Component {
                                     <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Souvenir</Text>
                                 </View>    
                             </Button>
-                            <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
+                            <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]} onPress={goToPickUp}>
                                 <View style={{alignItems:"center", justifyContent:"center"}}>
                                     <Image source={car} style={{width:70, height:50 }} />
                                     <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Pick Up Service</Text>

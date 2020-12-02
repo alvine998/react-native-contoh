@@ -44,11 +44,12 @@ import SimpanHotel from './src/pages/Hotel/SavedHotel';
 import Pengaturan from './src/pages/Settings';
 import Testss from './src/pages/IntroduceFull';
 import BoxSlider from './src/components/SliderBox';
+import Pickup from './src/pages/PickUpService';
 
 function App(){
   return (
       
-        <Routes/>
+        <Pickup/>
   );
 }
 

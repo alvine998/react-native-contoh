@@ -108,9 +108,9 @@ class Testss extends Component {
       const goToLogin = () => {
         Actions.login()
     }
-    if (this.state.showRealApp){
-      return <Routes/>;
-    } else {
+    // if (this.state.showRealApp){
+    //   return <Routes/>;
+    // } else {
       return (   
         <AppIntroSlider 
             data={slides}
@@ -122,10 +122,10 @@ class Testss extends Component {
             renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Next</Text>) }}
             renderPrevButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Back</Text>) }}
             renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'black' }}>Done</Text>) }}
-            onDone={this._onDone}
+            onDone={() => {Actions.login()}}
             />
      );
-    }
+    
         
     }
 }
