@@ -112,6 +112,26 @@ class ScreenSouvenir extends Component {
                                     </Card>
                                 </TouchableOpacity>
                             </View>
+
+                            <View style={{flexDirection:"row", marginTop:20, marginLeft:10}}>
+                                <TouchableOpacity>
+                                    <Card>
+                                        <Image source={pelangi} style={{width:200, height:100, marginTop:10}} />
+                                        <Text style={{fontSize:20, textAlign:"center"}}>Osing Deles</Text>
+                                        <Text style={{fontSize:16, textAlign:"center"}}>Original Merchandise{"\n"} of Banyuwangi Culture</Text>
+                                        <Text style={{fontSize:20, textAlign:"center"}}></Text>
+                                    </Card>
+                                </TouchableOpacity>
+                                
+                                <TouchableOpacity>
+                                    <Card>
+                                        <Image source={sun} style={{width:200, height:100, marginTop:10}} />
+                                        <Text style={{fontSize:20, textAlign:"center"}}>Osing Deles</Text>
+                                        <Text style={{fontSize:16, textAlign:"center"}}>Original Merchandise{"\n"} of Banyuwangi Culture</Text>
+                                        <Text style={{fontSize:20, textAlign:"center"}}></Text>
+                                    </Card>
+                                </TouchableOpacity>
+                            </View>
                         
                     </View>          
                     </ScrollView>

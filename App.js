@@ -47,11 +47,12 @@ import BoxSlider from './src/components/SliderBox';
 import Pickup from './src/pages/PickUpService';
 import IntroSouvenir from './src/pages/Souvenir/intro';
 import ScreenSouvenir from './src/pages/Souvenir';
+import DetailOrder from './src/pages/Souvenir/OrderDetail';
 
 function App(){
   return (
       
-        <ScreenSouvenir/>
+        <DetailOrder/>
   );
 }
 

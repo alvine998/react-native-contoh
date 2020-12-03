@@ -25,6 +25,7 @@ import Registrasi from './src/pages/SignUp';
 import Pickup from './src/pages/PickUpService';
 import IntroSouvenir from './src/pages/Souvenir/intro';
 import ScreenSouvenir from './src/pages/Souvenir';
+import DetailOrder from './src/pages/Souvenir/OrderDetail';
 
 const Routes = () => {
     return ( 
@@ -55,6 +56,7 @@ const Routes = () => {
                 <Stack key="pickup" component={Pickup} hideNavBar={true}/>
                 <Stack key="introsouvenir" component={IntroSouvenir} hideNavBar={true}/>
                 <Stack key="souvenir" component={ScreenSouvenir} hideNavBar={true}/>
+                <Stack key="orderdetail" component={DetailOrder} hideNavBar={true}/>
 
                 
             </Stack>
