@@ -49,11 +49,12 @@ import IntroSouvenir from './src/pages/Souvenir/intro';
 import ScreenSouvenir from './src/pages/Souvenir';
 import DetailOrder from './src/pages/Souvenir/OrderDetail';
 import ProdukS from './src/pages/Souvenir/Product';
+import KeranjangS from './src/pages/Souvenir/Carts';
 
 function App(){
   return (
       
-        <DetailOrder/>
+        <KeranjangS/>
   );
 }
 
