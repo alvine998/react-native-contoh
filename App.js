@@ -48,6 +48,7 @@ import Pickup from './src/pages/PickUpService';
 import IntroSouvenir from './src/pages/Souvenir/intro';
 import ScreenSouvenir from './src/pages/Souvenir';
 import DetailOrder from './src/pages/Souvenir/OrderDetail';
+import ProdukS from './src/pages/Souvenir/Product';
 
 function App(){
   return (
