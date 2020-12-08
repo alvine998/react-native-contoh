@@ -28,7 +28,10 @@ class KeranjangS extends Component {
                         <Icon type={"FontAwesome5"} name="chevron-left" style={{color:"#FFF"}}/>
                     </Left>
                     <Body>
-                        <Title>My Cart</Title>
+                        <View style={{flexDirection:"row"}}>
+                            <Icon type={"FontAwesome5"} name="shopping-cart" style={{color:"white"}} />
+                            <Title style={{marginLeft:10}}>My Cart</Title>
+                        </View>
                     </Body>
                     <Right/>
                 </Header>
@@ -53,7 +56,7 @@ class KeranjangS extends Component {
                                             <Icon type={"FontAwesome5"} name="trash-alt" style={{color:"white", marginLeft:130}} />
                                         </View>
                                         <Text style={{fontSize:16, color:"white"}}>Ukuran: </Text>
-                                        <Form style={{width:100, backgroundColor:"#229BD7"}}>
+                                        <Form style={{width:100, backgroundColor:"steelblue"}}>
                                             <Picker
                                                 mode="dropdown"
                                                 iosIcon={<Icon name="arrow-down" />}

@@ -50,11 +50,12 @@ import ScreenSouvenir from './src/pages/Souvenir';
 import DetailOrder from './src/pages/Souvenir/OrderDetail';
 import ProdukS from './src/pages/Souvenir/Product';
 import KeranjangS from './src/pages/Souvenir/Carts';
+import PaymentS from './src/pages/Souvenir/Payments';
 
 function App(){
   return (
       
-        <KeranjangS/>
+        <Registrasi/>
   );
 }
 

@@ -28,14 +28,25 @@ class Loginlagi extends Component {
                 <Text style={{textAlign: 'center', justifyContent: 'center', fontFamily:'Raleway-Bold'}}>LOGIN</Text>
                 <Item floatingLabel style={{width:250}}>
                     <Label style={{textAlign: 'left'}}>Email/Phone Number</Label>
-                    <Input />
+                    <Input ref={(input) => this._user = input}
+                        editable={true}
+                        maxLength={40}
+                        multiline={false}
+                    />
                 </Item>
                 <Item floatingLabel style={{width:250}}>
                     <Label style={{textAlign: 'left'}}>Password</Label>
-                    <Input secureTextEntry={true}/>
+                    <Input 
+                        secureTextEntry={true}
+                        editable={true}
+                        maxLength={40}
+                        multiline={false}
+                    />
+                    
                 </Item>
+                
                 <View style={styles.buttonContainer}>
-                    <Button onPress={goToHome}
+                    <Button onPress={this.submit()}
                     color={'green'} title='Submit'  />
                 </View>
                 <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>

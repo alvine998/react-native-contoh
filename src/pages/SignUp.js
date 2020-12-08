@@ -7,9 +7,25 @@ import { Actions } from 'react-native-router-flux';
 
 
 class Registrasi extends Component {
-    state = { 
-        
-     }
+    constructor(props){
+        super(props);
+        this.state = {
+            name:'',
+            phone:'',
+            email:'',
+            password:'',
+        }
+    }
+
+    onChangeText = (namaState, value) => {
+        this.setState = ({
+            [namaState]: value
+        })
+    }
+
+    onSubmit = () => {
+        console.log('Masuk')
+    }
 
      
     render() {
@@ -24,20 +40,20 @@ class Registrasi extends Component {
                         <Text style={{fontSize: 20}}>Sign Up</Text>
                         <Item floatingLabel style={{width:250}}>
                             <Label style={{textAlign: 'left'}}>Name</Label>
-                            <Input />
+                            <Input onChangeText={this.onChangeText} value={this.state.name} namaState="name" />
                         </Item>
                         <Item floatingLabel style={{width:250}}>
                             <Label style={{textAlign: 'left'}}>No. Phone</Label>
-                            <Input />
+                            <Input onChangeText={this.onChangeText} value={this.state.phone} namaState="phone"/>
                         </Item>
                         <Item floatingLabel style={{width:250}}>
                             <Label style={{textAlign: 'left'}}>Email</Label>
-                            <Input />
+                            <Input onChangeText={this.onChangeText} value={this.state.email} namaState="email"/>
                         </Item>
                         <Item floatingLabel style={{width:250}}>
                             
                             <Label style={{textAlign: 'left'}}>Password</Label>
-                            <Input secureTextEntry={true}  />
+                            <Input secureTextEntry={true}  onChangeText={this.onChangeText} value={this.state.password} namaState="password"/>
                            
                         </Item>
                         
