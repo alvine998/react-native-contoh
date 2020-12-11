@@ -52,10 +52,10 @@ import ProdukS from './src/pages/Souvenir/Product';
 import KeranjangS from './src/pages/Souvenir/Carts';
 import PaymentS from './src/pages/Souvenir/Payments';
 
-function App(){
+function App(){                 
   return (
       
-        <Registrasi/>
+        <Routes/>
   );
 }
 

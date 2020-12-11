@@ -3,29 +3,52 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import {Body,Button,  Container, Header, Icon, Left, Right, Title, Form, Label,Input, Item} from 'native-base';
 import Headerin from '../components/Header';
 import RegisForm from '../components/FormSignUp';
+import * as firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 
+// firebase.initializeApp({
+//     apiKey: "AIzaSyBJ_Fpkq165_AgkBLr4npVwEq2yHirAbBA",
+//     authDomain: "carikamar2020.firebaseapp.com",
+//     databaseURL: "https://carikamar2020-default-rtdb.firebaseio.com",
+//     projectId: "carikamar2020",
+//     storageBucket: "carikamar2020.appspot.com",
+//     messagingSenderId: "581669848000",
+//     appId: "1:581669848000:web:72e6788c9d9f884aa67e25",
+//     measurementId: "G-HF7GFNQLS6"
+// });
 
 class Registrasi extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            name:'',
-            phone:'',
-            email:'',
-            password:'',
-        }
-    }
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         name:'',
+    //         phone:'',
+    //         email:'',
+    //         password:'',
+    //         error:'',
+    //         loading: false
+    //     }
+    // }
 
-    onChangeText = (namaState, value) => {
-        this.setState = ({
-            [namaState]: value
-        })
-    }
+    // onChangeText = (namaState, value) => {
+    //     this.setState = ({
+    //         [namaState]: value
+    //     })
+    // }
 
-    onSubmit = () => {
-        console.log('Masuk')
-    }
+    // onSubmit = () => {
+    //     this.setState({error:'', loading:true})
+
+    //     const{email, password} = this.state;
+    //     firebase.auth().signInWithEmailAndPassword(email, password)
+    //     .then(() => {
+    //         this.setState({error:'', loading:false});
+    //         goToLogin();
+    //     })
+    //     .catch(() => {
+    //         this.setState({error:'Authetication Failed', loading:false});
+    //     })
+    // }
 
      
     render() {
@@ -40,7 +63,7 @@ class Registrasi extends Component {
                         <Text style={{fontSize: 20}}>Sign Up</Text>
                         <Item floatingLabel style={{width:250}}>
                             <Label style={{textAlign: 'left'}}>Name</Label>
-                            <Input onChangeText={this.onChangeText} value={this.state.name} namaState="name" />
+                            <Input onChangeText={name => this.setState({name})} />
                         </Item>
                         <Item floatingLabel style={{width:250}}>
                             <Label style={{textAlign: 'left'}}>No. Phone</Label>

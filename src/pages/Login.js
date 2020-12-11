@@ -9,6 +9,17 @@ import { Actions } from 'react-native-router-flux';
 
     
 class Loginlagi extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            email:'',
+            password:'',
+            error:'',
+            loading: false
+        }
+    }
+
     _onPressButton() {
 
         Alert.alert('You tapped the button!')
@@ -28,7 +39,8 @@ class Loginlagi extends Component {
                 <Text style={{textAlign: 'center', justifyContent: 'center', fontFamily:'Raleway-Bold'}}>LOGIN</Text>
                 <Item floatingLabel style={{width:250}}>
                     <Label style={{textAlign: 'left'}}>Email/Phone Number</Label>
-                    <Input ref={(input) => this._user = input}
+                    <Input onChangeText={email => this.setState({email})}
+                        value={this.state.email}
                         editable={true}
                         maxLength={40}
                         multiline={false}
@@ -37,6 +49,8 @@ class Loginlagi extends Component {
                 <Item floatingLabel style={{width:250}}>
                     <Label style={{textAlign: 'left'}}>Password</Label>
                     <Input 
+                        value={this.state.password}
+                        onChangeText={password => this.setState({password})}
                         secureTextEntry={true}
                         editable={true}
                         maxLength={40}
@@ -46,7 +60,7 @@ class Loginlagi extends Component {
                 </Item>
                 
                 <View style={styles.buttonContainer}>
-                    <Button onPress={this.submit()}
+                    <Button onPress={goToHome}
                     color={'green'} title='Submit'  />
                 </View>
                 <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>
