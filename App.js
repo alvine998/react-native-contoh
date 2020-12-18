@@ -55,7 +55,7 @@ import PaymentS from './src/pages/Souvenir/Payments';
 function App(){                 
   return (
       
-        <Routes/>
+        <ScreenSouvenir/>
   );
 }
 

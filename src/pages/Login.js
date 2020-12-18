@@ -34,7 +34,7 @@ class Loginlagi extends Component {
 
   componentDidMount = async () => {
     // ini api mock buat ngetest aja
-    const url = 'https://my-json-server.typicode.com/masfad/userjson/user/1';
+    const url = 'localhost';
     // untuk integrate api nya menggunakan axios nanti bisa di bikin modular function nya, ini sebagai contoh saja
     axios.get(url).then((res) => {
       const user = res.data;
