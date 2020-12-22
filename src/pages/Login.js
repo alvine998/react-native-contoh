@@ -103,11 +103,10 @@ class Loginlagi extends Component {
           <Button onPress={goToHome} color={'green'} title="Submit" />
         </View>
         <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>
-        <View style={styles.buttonContainerAlt}>
-          <TouchableOpacity>
+        <View style={{flex:1, flexDirection:'row',padding:10}}>
+          <TouchableOpacity style={{paddingRight:50}}>
             <Image source={imgg} style={{width: 40, height: 40}} />
           </TouchableOpacity>
-          <Text> </Text>
           <TouchableOpacity>
             <Image source={fb} style={{width: 40, height: 40}} />
           </TouchableOpacity>
