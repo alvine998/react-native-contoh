@@ -107,9 +107,10 @@ class IndexChooseHotel extends Component {
                                             width:280,
                                             marginLeft:10,
                                             fontSize:20,
-                                            
+                                            color:'black'
                                         }}
-                                        placeholder="Stay Duration"
+                                        editable={false}
+                                        value={String(this.props.Duration) + ' Night'}
                                         
                                     />
                             </View>
@@ -158,5 +159,11 @@ class IndexChooseHotel extends Component {
          );
     }
 }
+
+const mapStateToProps = state => {
+    return{
+        Duration: state.totalDuration
+    }
+}
  
-export default connect(IndexChooseHotel);
+export default connect(mapStateToProps)(IndexChooseHotel);

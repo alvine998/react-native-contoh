@@ -19,6 +19,7 @@ import Durasi from '../../../components/Duration';
 import Iconplus from '../../../components/IconPlus';
 import Iconminus from '../../../components/IconMin';
 import {connect} from 'react-redux';
+import ActionType from '../../../redux/reducer/globalActionType';
 
 
 const HotelDuration = (props) => {
@@ -40,12 +41,7 @@ const HotelDuration = (props) => {
     <Container>
       <Header style={{backgroundColor: '#229BD7'}}>
         <Left>
-          <Icon
-            type={'FontAwesome5'}
-            name="chevron-left"
-            style={{color: '#FFF'}}
-            onPress={goToBack}
-          />
+          
         </Left>
         <Body>
           <Title>Stay Duration</Title>
@@ -86,8 +82,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        handlePlus: () => dispatch({type: 'HANDLE_PLUS'}),
-        handleMinus: () => dispatch({type:  'HANDLE_MINUS'})
+        handlePlus: () => dispatch({type: ActionType.PLUS}),
+        handleMinus: () => dispatch({type:  ActionType.MINUS})
     }
 }
 
