@@ -67,7 +67,12 @@ const storeRedux = createStore(rootReducer);
 function App(){                 
   return (
       <Provider store={storeRedux}>
-        <Routes/>
+        <SafeAreaView>
+          <ScrollView>
+            <Registrasi/>
+          </ScrollView>
+        </SafeAreaView>
+  
       </Provider>
         
   );

@@ -65,7 +65,7 @@ class Loginlagi extends Component {
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-          paddingBottom: 100,
+          paddingBottom: 70,
           backgroundColor: '#FFFFFF',
         }}>
         <Headerin />
@@ -75,12 +75,12 @@ class Loginlagi extends Component {
             textAlign: 'center',
             justifyContent: 'center',
             fontFamily: 'Raleway-Bold',
-            fontSize:20,
+            fontSize:30,
           }}>
           LOGIN
         </Text>
         <Item floatingLabel style={{width: responsiveWidth(50)}}>
-          <Label style={{textAlign: 'left'}}>Email/Phone Number</Label>
+          <Label style={{textAlign: 'left'}}>Email atau No Ponsel</Label>
           <Input
             onChangeText={(email) => this.setState({email})}
             value={this.state.email}
@@ -100,22 +100,23 @@ class Loginlagi extends Component {
             multiline={false}
           />
         </Item>
+        <Text style={{marginLeft:100, marginTop:10, color:'#229BD7'}}>Lupa Password?</Text>
 
         <View style={styles.buttonContainer}>
-          <Button onPress={goToHome} color={'green'} title="Submit" />
+          <Button onPress={goToHome} color={'#229BD7'} title="Masuk" />
         </View>
-        <Text style={{textAlign: 'center', justifyContent: 'center'}}>OR</Text>
+        <Text style={{textAlign: 'center', justifyContent: 'center'}}>ATAU</Text>
         <View style={{flex:1, flexDirection:'row',padding:10}}>
-          <TouchableOpacity style={{paddingRight:50}}>
-            <Image source={imgg} style={{width: 40, height: 40}} />
+          <TouchableOpacity style={{paddingRight:30}}>
+            <Image source={imgg} style={{width: responsiveWidth(9.4), height: responsiveHeight(5)}} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={fb} style={{width: 40, height: 40}} />
+            <Image source={fb} style={{width: responsiveWidth(9.3), height: responsiveHeight(5)}} />
           </TouchableOpacity>
         </View>
-        <Text>{"\n \n You Don't Have an Account ?"}</Text>
-        <Text style={{color: 'blue'}} onPress={goToSignup}>
-          Register Here
+        <Text>{"\n \n Belum punya akun ?"}</Text>
+        <Text style={{color: '#229BD7'}} onPress={goToSignup}>
+          Daftar Disini
         </Text>
       </View>
     );
@@ -147,8 +148,9 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     padding: 20,
-    marginTop: 20,
+    marginTop: 5,
     width: responsiveWidth(60),
+    borderRadius:20,
   },
   buttonContainerAlt: {
     margin: 10,

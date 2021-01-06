@@ -30,11 +30,12 @@ const styles = StyleSheet.create({
     },
     title: {
       fontSize: 26,
-      color: '#555',
+      color: 'black',
       backgroundColor: 'transparent',
       textAlign: 'center',
       marginBottom: 16,
       fontWeight: 'bold',
+      fontFamily: 'BalooBhai-Regular',
       marginTop: responsiveHeight(-25)
     },
   })
@@ -118,10 +119,9 @@ class Testss extends Component {
             showPrevButton
             showNextButton
             dotStyle={{backgroundColor:"#DDD"}}
-            activeDotStyle={{backgroundColor:"green"}}
-            renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Next</Text>) }}
-            renderPrevButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'green' }}>Back</Text>) }}
-            renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: 'black' }}>Done</Text>) }}
+            activeDotStyle={{backgroundColor:"#229BD7"}}
+            renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: '#229BD7' }}>Next</Text>) }}
+            renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: '#229BD7' }}>Done</Text>) }}
             onDone={() => {Actions.login()}}
             />
      );
