@@ -18,12 +18,24 @@ import {Actions} from 'react-native-router-flux';
 import Durasi from '../../../components/Duration';
 import Iconplus from '../../../components/IconPlus';
 import Iconminus from '../../../components/IconMin';
+import {connect} from 'react-redux';
 
-const HotelDuration = () => {
+
+const HotelDuration = (props) => {
   const goToBack = () => {
     Actions.choose();
   };
-  const [Duration, setDuration] = useState(1);
+
+//   function validasi(){
+//       if(Duration < 1 || Duration == ""){
+//         setDuration(Duration)
+//       } else{
+//         props.handleMinus
+//       }
+
+//   }
+
+//   const [Duration, setDuration] = useState(1);
   return (
     <Container>
       <Header style={{backgroundColor: '#229BD7'}}>
@@ -44,6 +56,7 @@ const HotelDuration = () => {
             name="check"
             style={{color: '#FFF'}}
             onPress={goToBack}
+            value={props.Duration}
           />
         </Right>
       </Header>
@@ -56,13 +69,26 @@ const HotelDuration = () => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Iconminus onButtonMinus={() => setDuration(Duration - 1)} />
-          <Durasi quantity={Duration} />
-          <Iconplus onButtonPlus={() => setDuration(Duration + 1)} />
+          <Iconminus onButtonMinus={props.handleMinus} />
+          <Durasi Duration={props.Duration + ' Night'} />
+          <Iconplus onButtonPlus={props.handlePlus} />
         </View>
       </View>
     </Container>
   );
 };
 
-export default HotelDuration;
+const mapStateToProps = (state) => {
+    return{
+        Duration: state.totalDuration
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        handlePlus: () => dispatch({type: 'HANDLE_PLUS'}),
+        handleMinus: () => dispatch({type:  'HANDLE_MINUS'})
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HotelDuration);

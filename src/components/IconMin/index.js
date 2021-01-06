@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
 import {Icon} from 'native-base';
+import {connect} from 'react-redux';
 
 const Iconminus = (props) => {
   return (

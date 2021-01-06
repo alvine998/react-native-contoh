@@ -8,6 +8,9 @@ import SideBar from '../../../components/Sidebar';
 import loggo from '../../../images/Putih_Full_Horizontal.png';
 import plane from '../../../images/1500x500.jpg';
 
+import {connect} from 'react-redux';
+
+
 
 class IndexChooseHotel extends Component {
     closeDrawer(){
@@ -107,6 +110,7 @@ class IndexChooseHotel extends Component {
                                             
                                         }}
                                         placeholder="Stay Duration"
+                                        
                                     />
                             </View>
                         </TouchableOpacity>
@@ -155,4 +159,4 @@ class IndexChooseHotel extends Component {
     }
 }
  
-export default IndexChooseHotel;
+export default connect(IndexChooseHotel);

@@ -7,5 +7,8 @@
     import {name as appName} from './app.json';
 
 
+
+
+
 // AppRegistry.registerComponent('main', () => App);
 AppRegistry.registerComponent(appName, () => App);
