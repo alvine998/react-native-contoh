@@ -17,6 +17,7 @@ import Headerin from '../components/Header';
 import imgg from '../images/G.png';
 import fb from '../images/fb.webp';
 import {Actions} from 'react-native-router-flux';
+import {responsiveHeight, responsiveWidth} from 'react-native-responsive-dimensions';
 import axios from 'axios';
 
 class Loginlagi extends Component {
@@ -74,10 +75,11 @@ class Loginlagi extends Component {
             textAlign: 'center',
             justifyContent: 'center',
             fontFamily: 'Raleway-Bold',
+            fontSize:20,
           }}>
           LOGIN
         </Text>
-        <Item floatingLabel style={{width: 250}}>
+        <Item floatingLabel style={{width: responsiveWidth(50)}}>
           <Label style={{textAlign: 'left'}}>Email/Phone Number</Label>
           <Input
             onChangeText={(email) => this.setState({email})}
@@ -87,7 +89,7 @@ class Loginlagi extends Component {
             multiline={false}
           />
         </Item>
-        <Item floatingLabel style={{width: 250}}>
+        <Item floatingLabel style={{width: responsiveWidth(50)}}>
           <Label style={{textAlign: 'left'}}>Password</Label>
           <Input
             value={this.state.password}
@@ -146,6 +148,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     padding: 20,
     marginTop: 20,
+    width: responsiveWidth(60),
   },
   buttonContainerAlt: {
     margin: 10,

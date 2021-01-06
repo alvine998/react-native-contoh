@@ -61,6 +61,17 @@ class Pickup extends Component {
                                     textAlign:"center"
                                 }}
                             />
+                            <TextInput 
+                                placeholder="Enter Your Number Phone"
+                                style={{
+                                    borderWidth:1,
+                                    borderRadius:20,
+                                    fontSize:18,
+                                    marginTop:20,
+                                    width:280,
+                                    textAlign:"center"
+                                }}
+                            />
                             <View style={{alignItems:"center", justifyContent:"center"}}>
                                 <Button success style={{width:150, borderRadius:20, marginTop:20, backgroundColor:"#229BD7", alignItems:"center", justifyContent:"center"}}>
                                     <Text style={{fontSize:20, color:"#FFF"}}>Submit</Text>

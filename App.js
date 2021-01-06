@@ -51,6 +51,7 @@ import DetailOrder from './src/pages/Souvenir/OrderDetail';
 import ProdukS from './src/pages/Souvenir/Product';
 import KeranjangS from './src/pages/Souvenir/Carts';
 import PaymentS from './src/pages/Souvenir/Payments';
+import WaitingDriver from './src/pages/PickUpService/WaitingRoom';
 
 function App(){                 
   return (
