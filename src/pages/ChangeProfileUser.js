@@ -23,15 +23,13 @@ class UbahProfil extends Component {
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Icon type={"FontAwesome5"} name="chevron-left" onPress={goToProfil} />
+                        <Icon type={"FontAwesome5"} name="chevron-left" onPress={goToProfil} style={{color:'white'}} />
                     </Left>
                     <Body>
-                        <Title>Edit Your Profile</Title>
+                        <Title style={{fontFamily:'BalooBhai-Regular', fontSize:20}}>Edit Akun Profil</Title>
                     </Body>
-                    <Right>
-                        <Icon type={"FontAwesome5"} name="check" onPress={goToProfil} />
-                    </Right>
-                </Header>
+                    <Right/>
+                    </Header>
                 <View style={{flex:1, flexDirection:'column'}}>
                     <View style={{backgroundColor:"steelblue", height:250, borderBottomRightRadius:40, borderBottomLeftRadius:40}}>
                         <View style={[styles.profileImgContainer, {borderWidth:1, borderColor:'blue', marginLeft:150, marginTop:30}]}>
@@ -39,19 +37,19 @@ class UbahProfil extends Component {
                             
                         </View>
                         <View style={{flexDirection:"row"}}>
-                            <Text style={{marginLeft:150, marginTop:20, fontSize:20}}>Change Photos</Text>
-                            <Icon type={"FontAwesome5"} name="pen-square" />
+                            <Text style={{marginLeft:160, fontFamily:'BalooBhai-Regular', marginTop:20, fontSize:25, color:'white'}}>Ganti Foto</Text>
+                            <Icon type={"FontAwesome5"} name="pen-square" style={{color:'white'}} />
                         </View>
                         
                     </View>
                     <View style={{backgroundColor:"#FFF", height: 500}}>
                         <View style={{flexDirection:"column", marginTop:50}}>
-                            <Text style={{marginLeft:20, marginTop:20, fontSize:20}}>Name :</Text>
+                            <Text style={{marginLeft:20, marginTop:20, fontSize:23,fontFamily:'BalooBhai-Regular'}}>Name :</Text>
                             <TextInput
                                 style={{
                                     height:35, 
                                     width:400,
-                                    marginTop:20,
+                                    marginTop:10,
                                     marginLeft:20,
                                     borderBottomWidth:1,
                                     borderBottomColor:"#161924",
@@ -61,12 +59,12 @@ class UbahProfil extends Component {
                             />
                         </View>
                         <View style={{flexDirection:"column"}}>
-                            <Text style={{marginLeft:20, marginTop:20, fontSize:20}}>Email :</Text>
+                            <Text style={{marginLeft:20, marginTop:20, fontSize:23,fontFamily:'BalooBhai-Regular'}}>Email :</Text>
                             <TextInput
                                 style={{borderBottomWidth:1, 
                                     height:35, 
                                     width:400,
-                                    marginTop:20,
+                                    marginTop:10,
                                     marginLeft:20,
                                     fontSize:14
                                 }}
@@ -74,18 +72,21 @@ class UbahProfil extends Component {
                             />
                         </View>
                         <View style={{flexDirection:"column"}}>
-                            <Text style={{marginLeft:20, marginTop:20, fontSize:20}}>No HP :</Text>
+                            <Text style={{marginLeft:20, marginTop:20, fontSize:23,fontFamily:'BalooBhai-Regular'}}>No HP :</Text>
                             <TextInput
                                 style={{borderBottomWidth:1, 
                                     height:35, 
                                     width:400,
-                                    marginTop:20,
+                                    marginTop:10,
                                     marginLeft:20,
                                     borderBottomColor:"black",
                                     fontSize:14
                                 }}
                                 placeholder="085699556561"
                             />
+                        </View>
+                        <View>
+                            
                         </View>
                     </View>
                 </View>

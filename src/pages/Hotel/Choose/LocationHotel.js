@@ -20,6 +20,7 @@ class HotelLocation extends Component {
                     </Body>
                     <Right/>
                 </Header>
+                <ScrollView>
                 <View style={{
                         flexDirection: "row",
                         alignItems: "center",
@@ -32,6 +33,10 @@ class HotelLocation extends Component {
                         borderWidth: 1,
                         borderColor: '#161924',
                         borderRadius: 60,
+                        borderTopColor:'#dfdfdf',
+                        borderBottomColor:'#dfdfdf',
+                        borderRightColor:'#dfdfdf',
+                        borderLeftColor:'#dfdfdf',
                         }}>
                             <Icon type={"FontAwesome"} name="search" fontSize={25} style={{marginLeft:8}} />
                             <TextInput
@@ -85,6 +90,7 @@ class HotelLocation extends Component {
                         </Button>
                     </View>
                  </View>
+                 </ScrollView>
             </Container>
          );
     }

@@ -23,6 +23,7 @@ import * as firebase from 'firebase';
 import {Actions} from 'react-native-router-flux';
 import Axios from 'axios';
 import {responsiveWidth} from 'react-native-responsive-dimensions';
+import { ScrollView } from 'react-native';
 
 class Registrasi extends Component {
   constructor(props) {
@@ -66,6 +67,7 @@ class Registrasi extends Component {
     };
     return (
       <View>
+        <ScrollView>
         <Headerin />
         <View style={{backgroundColor: '#FFFFFF', alignItems: 'center'}}>
           <Form style={{alignItems: 'center', justifyContent: 'center', marginBottom:20}}>
@@ -133,16 +135,17 @@ class Registrasi extends Component {
           </View>
 
           <View style={{marginTop: 5}}>
-            <Text style={{textAlign: 'center', fontSize: 16}}>
+            <Text style={{textAlign: 'center', fontSize: 16, fontFamily:'BalooBhai-Regular'}}>
               Sudah punya akun?
             </Text>
             <Text
-              style={{color: '#229BD7', textAlign: 'center', fontSize: 16}}
+              style={{color: '#229BD7', textAlign: 'center', fontSize: 16, fontFamily:'BalooBhai-Regular'}}
               onPress={goToLogin}>
               Login Disini
             </Text>
           </View>
         </View>
+        </ScrollView>
       </View>
     );
   }

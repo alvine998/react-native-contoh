@@ -21,10 +21,13 @@ import trav4 from '../images/tl5.jpg';
 import FlatListSlider from '../components/FlatlistSlider/FlatlistSlider';
 import BoxSlider from '../components/SliderBox';
 import { Actions } from 'react-native-router-flux';
-
+import Carousel from 'react-native-carousel-control';
 
 
 class Screens extends Component {
+    state = {
+        entries:''
+    }
     closeDrawer(){
         this._drawer._root.close()     
     };
@@ -69,18 +72,18 @@ class Screens extends Component {
                     </Card>
 
                     <Card>
-                        <Text style={{textAlign:'center', fontSize:20, marginTop:10}}>Main Menu</Text>
+                        <Text style={{textAlign:'left', fontSize:25, marginTop:10, marginLeft:20, fontFamily:'BalooBhai-Regular'}}>Fitur Unggulan Kami</Text>
                         <View style={{flexDirection:'row', flex:1, alignItems:'center', justifyContent:'center'}}>
                             <Button primary style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]} onPress={goToHotel}>
                                 <View style={{alignItems:"center", justifyContent:"center"}}>
                                     <Image source={img} style={{width:50, height:50}} />
-                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Hotel</Text>
+                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16, fontFamily:'BalooBhai-Regular'}}>Hotel</Text>
                                 </View> 
                             </Button>
                             <Button primary transparent style={[styles.buttonContainer,  {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]}>
                             <View style={{alignItems:"center", justifyContent:"center"}}>
                                 <Image source={bag} style={{width:40, height:40}} />
-                                <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Travelling Kit</Text>
+                                <Text style={{textAlign:"center", color:"#FFF", fontSize:16, fontFamily:'BalooBhai-Regular'}}>Travelling Kit</Text>
                             </View>
                             </Button>
                         </View>
@@ -88,20 +91,41 @@ class Screens extends Component {
                             <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]} onPress={goToSouvenir}>
                                 <View style={{alignItems:"center", justifyContent:"center"}} >
                                     <Image source={store} style={{width:50, height:50}} />
-                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Souvenir</Text>
+                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16, fontFamily:'BalooBhai-Regular'}}>Souvenir</Text>
                                 </View>    
                             </Button>
                             <Button primary transparent style={[styles.buttonContainer, {borderRadius:20, alignItems:"center", justifyContent:"center", backgroundColor:"#229BD7"}]} onPress={goToPickUp}>
                                 <View style={{alignItems:"center", justifyContent:"center"}}>
                                     <Image source={car} style={{width:70, height:50 }} />
-                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16}}>Pick Up Service</Text>
+                                    <Text style={{textAlign:"center", color:"#FFF", fontSize:16, fontFamily:'BalooBhai-Regular'}}>Pick Up Service</Text>
                                 </View> 
                             </Button>
                         </View>
                     </Card>
 
+                    <Text style={{fontFamily:'BalooBhai-Regular', fontSize:25, marginLeft:20}}>Promo Bulan Ini</Text>
+
+                    <Carousel>
+                        <Card style={{height:150}}>
+                            <Text>Hello</Text>
+                            <Image />
+                        </Card>
+                        <Card style={{height:150}}>
+                            <Text>Hello</Text>
+                            <Image />
+                        </Card>
+                        <Card style={{height:150}}>
+                            <Text>Hello</Text>
+                            <Image />
+                        </Card>
+                        <Card style={{height:150}}>
+                            <Text>Hello</Text>
+                            <Image />
+                        </Card>
+                    </Carousel>
+
                     <Card>
-                        <Text style={{fontSize:20, textAlign:'center', marginBottom:10}}>Promo Paket Wisata</Text>
+                        <Text style={{fontSize:25, textAlign:'left', marginLeft: 20, marginBottom:10,fontFamily:'BalooBhai-Regular' }}>Paket Wisata Buat Kamu</Text>
                         <CardItem cardBody>
                             <Image source={trav} style={{height:300, width:null, flex:1}} />
                         </CardItem>
@@ -140,7 +164,7 @@ class Screens extends Component {
                 <Footer >
                     <FooterTab style={{backgroundColor:"#229BD7"}}>
                         <Button full>
-                            <Text style={{color:"#FFF"}}>CariKamar.id</Text>
+                            <Text style={{color:"#FFF", fontFamily:'BalooBhai-Regular', fontSize:15}}>CariKamar.id</Text>
                         </Button>
                     </FooterTab>
                 </Footer>
@@ -155,7 +179,7 @@ const styles = StyleSheet.create({
     buttonContainer:{
         height:100,
         margin:8,
-        width:100
+        width:150
     }
 })
  

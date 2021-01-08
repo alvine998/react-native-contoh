@@ -1,7 +1,10 @@
 import ActionType from './globalActionType';
+import {Actions} from 'react-native-router-flux';
 
 const globalState = {
     totalDuration: 1,
+    userEmail:'',
+    userPassword:'',
 }
 
 // Reducer
@@ -27,6 +30,14 @@ const rootReducer = (state = globalState, action) => {
       totalDuration: totalDuration
     }
   }
+
+  // if(action.type === ActionType.LOGIN){
+  //   if(userEmail == 'admin' && userPassword == 'admin'){
+  //     const goToHome = () => {
+  //       Actions.home();
+  //     }
+  //   }
+  // }
   return state;
 }
 

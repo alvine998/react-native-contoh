@@ -19,6 +19,10 @@ import fb from '../images/fb.webp';
 import {Actions} from 'react-native-router-flux';
 import {responsiveHeight, responsiveWidth} from 'react-native-responsive-dimensions';
 import axios from 'axios';
+import {connect} from 'react-redux';
+import ActionType from '../redux/reducer/globalActionType';
+
+
 
 class Loginlagi extends Component {
   constructor(props) {
@@ -82,7 +86,6 @@ class Loginlagi extends Component {
         <Item floatingLabel style={{width: responsiveWidth(50)}}>
           <Label style={{textAlign: 'left'}}>Email atau No Ponsel</Label>
           <Input
-            onChangeText={(email) => this.setState({email})}
             value={this.state.email}
             editable={true}
             maxLength={40}
@@ -93,7 +96,6 @@ class Loginlagi extends Component {
           <Label style={{textAlign: 'left'}}>Password</Label>
           <Input
             value={this.state.password}
-            onChangeText={(password) => this.setState({password})}
             secureTextEntry={true}
             editable={true}
             maxLength={40}
@@ -158,5 +160,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 });
+
+// const mapStateToProps = (state) => {
+//   return{
+//       email: state.userEmail,
+//       password: state.userPassword
+//   }
+// }
+
+// const mapDispatchToProps = (dispatch) => {
+//   return{
+//       handleLogin: () => dispatch({type: ActionType.LOGIN})
+//   }
+// }
 
 export default Loginlagi;

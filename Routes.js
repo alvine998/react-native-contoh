@@ -20,7 +20,6 @@ import HotelPerson from './src/pages/Hotel/Choose/PersonHotel';
 import HotelRoom from './src/pages/Hotel/Choose/RoomHotel';
 import HotelPaymentDetail from './src/pages/Hotel/PaymentDetailHotel';
 import Testss from './src/pages/IntroduceFull';
-import Splasher from './src/pages/Splash';
 import Registrasi from './src/pages/SignUp';
 import Pickup from './src/pages/PickUpService';
 import IntroSouvenir from './src/pages/Souvenir/intro';
@@ -49,9 +48,8 @@ const Routes = () => {
                 <Stack key="person" component={HotelPerson} hideNavBar={true}/>
                 <Stack key="room" component={HotelRoom} hideNavBar={true}/>
                 <Stack key="payment" component={HotelPaymentDetail} hideNavBar={true}/>
-                <Stack key="intro" component={Testss} hideNavBar={true} initial={true} />
-                <Stack key="login" component={Loginlagi} hideNavBar={true}  />
-                <Stack key="splash" component={Splasher} hideNavBar={true}/>
+                <Stack key="intro" component={Testss} hideNavBar={true}  initial={true}  />
+                <Stack key="login" component={Loginlagi} hideNavBar={true}/>
                 <Stack key="regis" component={Registrasi} hideNavBar={true}/>
                 <Stack key="pickup" component={Pickup} hideNavBar={true}/>
                 <Stack key="introsouvenir" component={IntroSouvenir} hideNavBar={true}/>

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, {Component, Fragment} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -16,7 +16,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 // import HomeScreen from './src/components/Index';
-import Splasher from './src/pages/Splash';
 import Loginlagi from './src/pages/Login';
 import Halaman1 from './src/pages/Introduce1';
 import Halaman23 from './src/pages/Introduce2';
@@ -33,7 +32,7 @@ import IndexChooseHotel from './src/pages/Hotel/Choose';
 import HotelLocation from './src/pages/Hotel/Choose/LocationHotel';
 import Datepicker from './src/components/DatePicker';
 import HotelDuration from './src/pages/Hotel/Choose/DurationHotel';
-import HotelPerson from './src/pages/Hotel/Choose/PersonHotel'
+import HotelPerson from './src/pages/Hotel/Choose/PersonHotel';
 import Detailhotel from './src/pages/Hotel/DetailHotel';
 import HotelRoomDetail from './src/pages/Hotel/DetailRoomHotel';
 import HotelBooking from './src/pages/Hotel/Booking/BookingHotel';
@@ -58,25 +57,19 @@ import {Provider} from 'react-redux';
 import rootReducer from './src/redux/reducer/globalReducer';
 
 
-
 // Store
 const storeRedux = createStore(rootReducer);
 
 // Dispatch Action
 
-function App(){                 
+function App() {
   return (
-      <Provider store={storeRedux}>
-        <SafeAreaView>
-          <ScrollView>
-            <Registrasi/>
-          </ScrollView>
-        </SafeAreaView>
-  
-      </Provider>
+    <Provider store={storeRedux}>
         
+          <UbahProfil/>
+        
+    </Provider>
   );
 }
-
 
 export default App;

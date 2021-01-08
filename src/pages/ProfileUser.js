@@ -24,6 +24,10 @@ class Profil extends Component {
         const goToChange = () => {
             Actions.ubahprofil()
         }
+
+        const goToHome = () => {
+            Actions.home()
+        }
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}
@@ -33,42 +37,37 @@ class Profil extends Component {
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Button transparent onPress={() => this.openDrawer()}>
-                            <Icon type={"FontAwesome"} name="bars"/>
-                        </Button>
+                            <Icon type={"FontAwesome"} name="chevron-left" style={{color:'white'}}/>                        
                     </Left>
                     <Body>
-                        <Image source={loggo} style={{width:200, height:40, marginLeft:30}} />
+                        <Title style={{fontFamily:'BalooBhai-Regular', fontSize:25}}>Akun Saya</Title>
                     </Body>
                     <Right/>
                 </Header>
                 <Content padder>
                     <View style={{flex:1, flexDirection:'column', justifyContent:'center', alignItems:'stretch'}}>
-                        <View style={{height:50, backgroundColor:'steelblue'}}>
-                            <Text style={{color:"#FFF", fontSize:20, margin:10}}>Your Profile</Text>
-                        </View>
                         <View style={{height:700, backgroundColor:'#FFF'}}>
                             <View style={[styles.profileImgContainer, {borderWidth:1, borderColor:'blue', marginLeft:130, marginTop:30}]}>
                                 <Image source={ggg} style={[styles.profileImg, {height:150, width:150}]} />
                             </View>
                             <View style={{flexDirection:'row'}}>
-                                <Text style={{marginLeft:20, fontSize:20, marginTop:50}}>ID : </Text>
-                                <Text style={{marginLeft:50, fontSize:20, marginTop:50}}>131002569</Text>
+                                <Text style={{marginLeft:20, fontSize:20, marginTop:50, fontFamily:'BalooBhai-Regular'}}>ID : </Text>
+                                <Text style={{marginLeft:50, fontSize:20, marginTop:50, fontFamily:'BalooBhai-Regular'}}>131002569</Text>
                             </View>
                             <View style={{flexDirection:'row'}}>
-                                <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>Name : </Text>
-                                <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>Annisa</Text>
+                                <Text style={{marginLeft:20, fontSize:20, marginTop:20,fontFamily:'BalooBhai-Regular'}}>Name : </Text>
+                                <Text style={{marginLeft:20, fontSize:20, marginTop:20, fontFamily:'BalooBhai-Regular'}}>Annisa</Text>
                             </View>
                             <View style={{flexDirection:'row'}}>
-                                <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>Email : </Text>
-                                <Text style={{marginLeft:25, fontSize:20, marginTop:20}}>annisasamara@gmail.com</Text>
+                                <Text style={{marginLeft:20, fontSize:20, marginTop:20, fontFamily:'BalooBhai-Regular'}}>Email : </Text>
+                                <Text style={{marginLeft:25, fontSize:20, marginTop:20, fontFamily:'BalooBhai-Regular'}}>annisasamara@gmail.com</Text>
                             </View>
                             <View style={{flexDirection:'row'}}>
-                                <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>No HP : </Text>
-                                <Text style={{marginLeft:20, fontSize:20, marginTop:20}}>085699556165</Text>
+                                <Text style={{marginLeft:20, fontSize:20, marginTop:20, fontFamily:'BalooBhai-Regular'}}>No HP : </Text>
+                                <Text style={{marginLeft:20, fontSize:20, marginTop:20, fontFamily:'BalooBhai-Regular'}}>085699556165</Text>
                             </View>
-                            <Button primary full rounded style={{margin:50, backgroundColor:'steelblue'}}>
-                                <Text style={{fontSize:20, color:'#FFF'}} onPress={goToChange}>Change</Text>
+                            <Button primary full rounded style={{margin:50, backgroundColor:'#229BD7'}}>
+                                <Text style={{fontSize:20, color:'#FFF', fontFamily:'BalooBhai-Regular'}} onPress={goToChange}>Change</Text>
                             </Button>
                         </View>
                         
@@ -78,7 +77,7 @@ class Profil extends Component {
                 <Footer >
                     <FooterTab style={{backgroundColor:"#229BD7"}}>
                         <Button full>
-                            <Text style={{color:"#FFF"}}>CariKamar.id</Text>
+                            <Text style={{color:"#FFF", fontFamily:'BalooBhai-Regular'}}>CariKamar.id</Text>
                         </Button>
                     </FooterTab>
                 </Footer>
