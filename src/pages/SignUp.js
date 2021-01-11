@@ -22,7 +22,7 @@ import RegisForm from '../components/FormSignUp';
 import * as firebase from 'firebase';
 import {Actions} from 'react-native-router-flux';
 import Axios from 'axios';
-import {responsiveWidth} from 'react-native-responsive-dimensions';
+import {responsiveFontSize, responsiveWidth} from 'react-native-responsive-dimensions';
 import { ScrollView } from 'react-native';
 
 class Registrasi extends Component {
@@ -135,11 +135,11 @@ class Registrasi extends Component {
           </View>
 
           <View style={{marginTop: 5}}>
-            <Text style={{textAlign: 'center', fontSize: 16, fontFamily:'BalooBhai-Regular'}}>
+            <Text style={{textAlign: 'center', fontSize: responsiveFontSize(2), fontFamily:'BalooBhai-Regular'}}>
               Sudah punya akun?
             </Text>
             <Text
-              style={{color: '#229BD7', textAlign: 'center', fontSize: 16, fontFamily:'BalooBhai-Regular'}}
+              style={{color: '#229BD7', textAlign: 'center', fontSize: responsiveFontSize(2),paddingBottom:10, fontFamily:'BalooBhai-Regular'}}
               onPress={goToLogin}>
               Login Disini
             </Text>

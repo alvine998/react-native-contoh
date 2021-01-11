@@ -13,6 +13,7 @@ import storee from '../images/store2.png';
 import pikk from '../images/pikup.png';
 import cust from '../images/customer.png';
 import draft from '../images/daftarkan.png';
+import list from '../images/list.png'
 
 import { Actions } from 'react-native-router-flux';
 import { View } from 'react-native';
@@ -62,6 +63,10 @@ export default class SideBar extends Component{
                     <Button transparent full style={{marginTop: 10, justifyContent:'flex-start'}} onPress={goToProfil}>
                         <Image source={fff} style={{width:30, height:30, marginLeft:10}} />
                         <Text style={{color:'white', fontSize:20, marginLeft:25, color:'black', fontFamily:'BalooBhai-Regular'}}>Akun Saya</Text>
+                    </Button>
+                    <Button transparent full style={{marginTop: 10, justifyContent:'flex-start'}} onPress={goToProfil}>
+                        <Image source={list} style={{width:30, height:30, marginLeft:10}} />
+                        <Text style={{color:'white', fontSize:20, marginLeft:25, color:'black', fontFamily:'BalooBhai-Regular'}}>Bucket List</Text>
                     </Button>
 
                     <View style={{borderTopWidth:1, marginTop:10}}>

@@ -8,9 +8,20 @@ import { View } from 'react-native';
 import Carousel from 'react-native-carousel-control';
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import img from '../../images/bg-5.jpg';
+
 import kpt from '../../images/img-hotel/ktpg.jpg';
 import bli from '../../images/img-hotel/hrc.jpg';
 import bli2 from '../../images/img-hotel/hhtl.jpg';
+
+// img Oleh oleh
+import odablie from '../../images/souvenir/odabli.jpeg';
+import krisna from '../../images/souvenir/krisna.jpg';
+import osing from '../../images/souvenir/osingde.jpg';
+
+// img wisata
+import gwk from '../../images/wisata/gwk.png';
+import gnd from '../../images/wisata/gandrung.jpg';
+import kly from '../../images/wisata/klayar.jpg';
 
 class ItemAdd extends Component {
     state = {  }
@@ -35,6 +46,7 @@ class ItemAdd extends Component {
                         <Image source={img} style={{width:responsiveWidth(20), height:responsiveHeight(10), marginLeft:50, marginTop:10}} />
                     </View>
                     <Content>
+                        {/* Ini Hotel */}
                         <Text style={[styles.font, {fontSize:responsiveFontSize(2.5), marginLeft:20}]}>Hotel</Text>
                         <Carousel>
                             
@@ -65,30 +77,31 @@ class ItemAdd extends Component {
                             
                         </Carousel>
 
-                        <Text style={[styles.font, {fontSize:responsiveFontSize(2.5), marginLeft:20}]}>Hotel</Text>
+                        {/* Ini Carousel Souvenir */}
+                        <Text style={[styles.font, {fontSize:responsiveFontSize(2.5), marginLeft:20}]}>Souvenir</Text>
                         <Carousel>
                             
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20}}>
-                                    <ImageBackground source={kpt} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Ketapang Indah Hotel</Text>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Ketapang, Banyuwangi</Text>
+                                    <ImageBackground source={osing} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Osing Deles</Text>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Banyuwangi</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20, marginLeft:10}}>
-                                    <ImageBackground source={bli} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Hard Rock Hotel</Text>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Kutai, Bali</Text>
+                                    <ImageBackground source={krisna} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Krisna Oleh-Oleh</Text>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Bali</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20}}>
-                                    <ImageBackground source={bli2} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Bali Hotel</Text>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Sanur, Bali</Text>
+                                    <ImageBackground source={odablie} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>O-Odabli</Text>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Blitar</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20, marginLeft:10}}>
-                                    <ImageBackground source={bli} blurRadius={10} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Lihat Hotel Lainnya</Text>
+                                    <ImageBackground source={krisna} blurRadius={10} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Lihat Souvenir Lainnya</Text>
                                         <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Tap Disini</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
@@ -96,30 +109,31 @@ class ItemAdd extends Component {
                                 
                         </Carousel>
 
-                        <Text style={[styles.font, {fontSize:responsiveFontSize(2.5), marginLeft:20}]}>Hotel</Text>
+                        {/* Ini Carousel Wisata */}
+                        <Text style={[styles.font, {fontSize:responsiveFontSize(2.5), marginLeft:20}]}>Wisata</Text>
                         <Carousel>
                             
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20}}>
-                                    <ImageBackground source={kpt} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Ketapang Indah Hotel</Text>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Ketapang, Banyuwangi</Text>
+                                    <ImageBackground source={gwk} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Garuda Wisnu Kencana</Text>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Bali</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20, marginLeft:10}}>
-                                    <ImageBackground source={bli} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Hard Rock Hotel</Text>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Kutai, Bali</Text>
+                                    <ImageBackground source={gnd} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Taman Terakota Gandrung</Text>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Banyuwangi</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20}}>
-                                    <ImageBackground source={bli2} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Bali Hotel</Text>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Sanur, Bali</Text>
+                                    <ImageBackground source={kly} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Pantai Klayar</Text>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Pacitan</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20, marginLeft:10}}>
-                                    <ImageBackground source={bli} blurRadius={10} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
-                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Lihat Hotel Lainnya</Text>
+                                    <ImageBackground source={gnd} blurRadius={10} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Lihat Wisata Lainnya</Text>
                                         <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Tap Disini</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>

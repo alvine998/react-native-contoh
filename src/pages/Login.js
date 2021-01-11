@@ -6,18 +6,18 @@ import {
   ImageBackground,
   Text,
   Image,
-  Button,
+  
   StyleSheet,
   TextInput,
   Linking,
 } from 'react-native';
 // import bgimage from '../images/bg.jpg';
-import {Item, Label, Input} from 'native-base';
+import {Item, Label, Input, Button} from 'native-base';
 import Headerin from '../components/Header';
 import imgg from '../images/G.png';
 import fb from '../images/fb.webp';
 import {Actions} from 'react-native-router-flux';
-import {responsiveHeight, responsiveWidth} from 'react-native-responsive-dimensions';
+import {responsiveFontSize, responsiveHeight, responsiveWidth} from 'react-native-responsive-dimensions';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import ActionType from '../redux/reducer/globalActionType';
@@ -78,8 +78,9 @@ class Loginlagi extends Component {
           style={{
             textAlign: 'center',
             justifyContent: 'center',
-            fontFamily: 'Raleway-Bold',
-            fontSize:30,
+            fontFamily:'BalooBhai-Regular',
+            fontSize:responsiveFontSize(5),
+            color:'#229BD7'
           }}>
           LOGIN
         </Text>
@@ -102,13 +103,15 @@ class Loginlagi extends Component {
             multiline={false}
           />
         </Item>
-        <Text style={{marginLeft:100, marginTop:10, color:'#229BD7'}}>Lupa Password?</Text>
+        <Text style={{marginLeft:100, marginTop:10, color:'#229BD7', fontFamily:'BalooBhai-Regular'}}>Lupa Password?</Text>
 
-        <View style={styles.buttonContainer}>
-          <Button onPress={goToHome} color={'#229BD7'} title="Masuk" />
-        </View>
+       <View style={{paddingBottom:20, marginTop:20}}>
+       <Button full rounded style={{backgroundColor:'#229BD7', width:responsiveWidth(50)}}>
+          <Text style={{fontFamily:'BalooBhai-Regular', fontSize:responsiveFontSize(2), color:'white'}}>Masuk</Text>
+        </Button>
+       </View>
         <Text style={{textAlign: 'center', justifyContent: 'center'}}>ATAU</Text>
-        <View style={{flex:1, flexDirection:'row',padding:10}}>
+        <View style={{flex:1, flexDirection:'row',padding:10, marginTop:10}}>
           <TouchableOpacity style={{paddingRight:30}}>
             <Image source={imgg} style={{width: responsiveWidth(9.4), height: responsiveHeight(5)}} />
           </TouchableOpacity>
@@ -116,10 +119,12 @@ class Loginlagi extends Component {
             <Image source={fb} style={{width: responsiveWidth(9.3), height: responsiveHeight(5)}} />
           </TouchableOpacity>
         </View>
-        <Text>{"\n \n Belum punya akun ?"}</Text>
-        <Text style={{color: '#229BD7'}} onPress={goToSignup}>
-          Daftar Disini
-        </Text>
+        <Text style={{fontFamily:'BalooBhai-Regular', fontSize:responsiveFontSize(2)}}>{"\n \n Belum punya akun ?"}</Text>
+        <TouchableOpacity  onPress={goToSignup}>
+          <Text style={{color: '#229BD7',fontFamily:'BalooBhai-Regular', fontSize:responsiveFontSize(2)}}>
+            Daftar Disini
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }

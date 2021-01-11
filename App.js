@@ -70,7 +70,7 @@ function App() {
   return (
     <Provider store={storeRedux}>
         
-          <ItemAdd/>
+          <Screens/>
         
     </Provider>
   );

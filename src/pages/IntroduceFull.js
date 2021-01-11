@@ -51,14 +51,14 @@ const slides = [
     {
         key:'key2',
         title:'Bukan Platform Biasa',
-        text:'Cari Penginapan Terbaik Kapanpun Dimanapun',
+        text:'Cari Penginapan Terbaik Kapanpun dan Dimanapun',
         image: require('../images/tl1.jpg'),
         backgroundColor:'#27ae60',
     },
     {
         key:'key3',
         title:'Pick Up Service',
-        text:'Dimanapun Kamu Berada Kami Akan Siap Jemput Kamu Menuju Hotel',
+        text:'Kapanpun dan Dimanapun, Caka Siap Jemput!',
         image: require('../images/cart.png'),
         backgroundColor:'#27ae60',
     },
@@ -120,8 +120,8 @@ class Testss extends Component {
             showNextButton
             dotStyle={{backgroundColor:"#DDD"}}
             activeDotStyle={{backgroundColor:"#229BD7"}}
-            renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: '#229BD7' }}>Next</Text>) }}
-            renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: '#229BD7' }}>Done</Text>) }}
+            renderNextButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: '#229BD7' }}>Selanjutnya</Text>) }}
+            renderDoneButton={() => { return (<Text style={{ fontSize: responsiveFontSize(2.3), fontWeight: 'bold', color: '#229BD7' }}>Selesai</Text>) }}
             onDone={() => {Actions.login()}}
             />
      );
