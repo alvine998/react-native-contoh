@@ -55,6 +55,10 @@ import WaitingDriver from './src/pages/PickUpService/WaitingRoom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import rootReducer from './src/redux/reducer/globalReducer';
+import Bucket from './src/pages/Bitbucket';
+import Kolleksi from './src/pages/Bucket/Koleksi';
+import VKoleksi from './src/pages/Bucket/View-Koleksi';
+import ItemAdd from './src/pages/Bucket/Add-Item';
 
 
 // Store
@@ -66,7 +70,7 @@ function App() {
   return (
     <Provider store={storeRedux}>
         
-          <UbahProfil/>
+          <ItemAdd/>
         
     </Provider>
   );
