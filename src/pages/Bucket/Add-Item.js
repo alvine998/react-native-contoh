@@ -1,4 +1,4 @@
-import { Body, Card, Container, Content, Header, Left, Right, Title } from 'native-base';
+import { Body, Card, Container, Content, Form, Header, Icon, Left, Picker, Right, Title } from 'native-base';
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Text } from 'react-native';
@@ -24,7 +24,18 @@ import gnd from '../../images/wisata/gandrung.jpg';
 import kly from '../../images/wisata/klayar.jpg';
 
 class ItemAdd extends Component {
-    state = {  }
+    constructor(props){
+        super(props);
+        this.state = {
+            selected: "key0"
+        };
+    }
+
+    onValueChange(value: string){
+        this.setState({
+            selected: value
+        });
+    }
     render() { 
         return ( 
             <Container>
@@ -52,6 +63,19 @@ class ItemAdd extends Component {
                             
                                 <TouchableOpacity style={{width:responsiveWidth(80), borderRadius:20}}>
                                     <ImageBackground source={kpt} style={{width:responsiveWidth(80), height:responsiveHeight(20), overflow:'hidden', borderRadius:20}}>
+                                        {/* <Form style={{marginLeft:80}}>
+                                            <Picker
+                                                mode="dropdown"
+                                                iosIcon={<Icon type={'FontAwesome5'} name="arrow-down" style={{color:'white'}} />}
+                                                style={{width:responsiveWidth(30)}}
+                                                selectedValue={this.state.selected}
+                                                onValueChange={this.onValueChange.bind(this)}
+                                            >
+                                                <Picker.Item label="simpan" value="key0"/>
+                                                <Picker.Item label="bagikan" value="key1"/>                                                
+                                                <Picker.Item label="lihat" value="key2"/>                                                                                                
+                                            </Picker>
+                                        </Form> */}
                                         <Text style={[styles.font, {color:'white', marginLeft:10, marginTop:100, fontSize:responsiveFontSize(2.2)}]}>Ketapang Indah Hotel</Text>
                                         <Text style={[styles.font, {color:'white', marginLeft:10, fontSize:responsiveFontSize(1.5)}]}>Ketapang, Banyuwangi</Text>
                                     </ImageBackground>

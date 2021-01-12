@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, Text, TextInput , Dimensions, TouchableHighlight, StyleSheet, Image, ScrollView} from 'react-native';
+import React, { Component, useCallback, useState } from 'react';
+import { View, Text, TextInput , Dimensions, TouchableHighlight,RefreshControl, StyleSheet, Image, ScrollView} from 'react-native';
 import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../components/Sidebar';
 import Searchbar from '../components/SearchBar';
@@ -24,6 +24,7 @@ import { Actions } from 'react-native-router-flux';
 import Carousel from 'react-native-carousel-control';
 
 
+
 class Screens extends Component {
     state = {
         entries:''
@@ -45,6 +46,21 @@ class Screens extends Component {
         const goToSouvenir = () => {
             Actions.introsouvenir()
         }
+
+        // const wait = (timeout) => {
+        //     return new Promise(resolve => {
+        //         setTimeout(resolve, timeout);
+        //     });
+        // }
+
+        // const [refreshing, setRefreshing] = useState(false);
+
+        // const onRefresh = useCallback(() => {
+        //     setRefreshing(true);
+        //     wait(2000).then(() => setRefreshing(false));
+        // }, []);
+// refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+
         return ( 
             <Drawer
                 ref={(ref) => {this._drawer = ref;}}

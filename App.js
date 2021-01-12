@@ -59,6 +59,7 @@ import Bucket from './src/pages/Bitbucket';
 import Kolleksi from './src/pages/Bucket/Koleksi';
 import VKoleksi from './src/pages/Bucket/View-Koleksi';
 import ItemAdd from './src/pages/Bucket/Add-Item';
+import Testing from './src/Index';
 
 
 // Store
@@ -70,7 +71,7 @@ function App() {
   return (
     <Provider store={storeRedux}>
         
-          <Screens/>
+          <IndexChooseHotel/>
         
     </Provider>
   );

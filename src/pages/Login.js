@@ -106,7 +106,7 @@ class Loginlagi extends Component {
         <Text style={{marginLeft:100, marginTop:10, color:'#229BD7', fontFamily:'BalooBhai-Regular'}}>Lupa Password?</Text>
 
        <View style={{paddingBottom:20, marginTop:20}}>
-       <Button full rounded style={{backgroundColor:'#229BD7', width:responsiveWidth(50)}}>
+       <Button full rounded style={{backgroundColor:'#229BD7', width:responsiveWidth(50)}} onPress={goToHome}>
           <Text style={{fontFamily:'BalooBhai-Regular', fontSize:responsiveFontSize(2), color:'white'}}>Masuk</Text>
         </Button>
        </View>
