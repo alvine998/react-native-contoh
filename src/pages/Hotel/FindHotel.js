@@ -11,81 +11,133 @@ import Slider from '@react-native-community/slider';
 import loggo from '../../images/Putih_Full_Horizontal.png';
 import cordoba from '../../images/img-hotel/cordoba.webp';
 
+// Import hotel
+import joglo from '../../images/img-hotel/joglo.jpg';
+import ijen from '../../images/img-hotel/ijen-resort.jpg';
+import micasa from '../../images/img-hotel/micasa.jpg';
+import kokoon from '../../images/img-hotel/kokoon-2.jpg';
+import solong from '../../images/img-hotel/solong.jpg';
+import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
+
+
 
 class CariHotel extends Component {
-    closeDrawer(){
-        this._drawer._root.close()     
-    };
-    openDrawer(){
-        this._drawer._root.open()
-    };
+    // closeDrawer(){
+    //     this._drawer._root.close()     
+    // };
+    // openDrawer(){
+    //     this._drawer._root.open()
+    // };
 
     render() { 
         const goToDetailHotel = () => {
             Actions.detailhotel()
         }
         return ( 
-            <Drawer
-                ref={(ref) => {this._drawer = ref;}}
-                content={<SideBar navigator={this.navigator} />}
-                onClose={() => this.closeDrawer()}
-            >
+            // <Drawer
+            //     ref={(ref) => {this._drawer = ref;}}
+            //     content={<SideBar navigator={this.navigator} />}
+            //     onClose={() => this.closeDrawer()}
+            // >
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
-                        <Button transparent onPress={() => this.openDrawer()}>
-                            <Icon type={"FontAwesome"} name="bars"/>
-                        </Button>
+                        <TouchableOpacity>
+                            <Icon type={"FontAwesome5"} name="chevron-left" style={{color:'white'}}/>
+                        </TouchableOpacity>
                     </Left>
                     <Body>
-                        <Image source={loggo} style={{width:200, height:40, marginLeft:30}} />
+                        <Title style={styles.title}>Sekitar Saya</Title>
                     </Body>
-                    <Right/>
+                    <Right>
+                        <TouchableOpacity>
+                            <Icon type={"FontAwesome5"} name="sliders-h" style={{color:'#fff'}} />
+                        </TouchableOpacity>
+                    </Right>
                 </Header>
                 <Content>
                     <View style={{flex:1, flexDirection:"column"}}>
-                        <View style={{backgroundColor:"steelblue", height:50}}>
-                            <View style={{flexDirection:"row"}}>
-                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} onPress={this.toggleModal} >
-                                    <Text style={{fontSize:20, color:'#FFF'}}>Filter</Text>
-                                </Button>
-                                
-                                <Button primary transparent style={{borderWidth:1, width:100, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} >
-                                    <Text style={{fontSize:20, color:'#FFF', textAlign:"center"}}>Area</Text>
-                                </Button>
-                                
-                                <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} >
-                                    <Text style={{fontSize:20, color:'#FFF'}}>Hotel</Text>
-                                </Button>
-                                <Button primary transparent style={{borderWidth:1, width:90, marginLeft:10, height:40, marginTop:5, alignItems:"center", justifyContent:"center"}} >
-                                    <Text style={{fontSize:20, color:'#FFF'}}>Villa</Text>
-                                </Button>
+                        <View style={{backgroundColor:"#229BD7", height:50}}>
+                            <View style={{alignItems:'center'}}>
+                                <View style={{
+                                    borderWidth:1,
+                                    width:responsiveWidth(90),
+                                    height:responsiveHeight(5),
+                                    borderColor:'white',
+                                    borderRadius:20,
+                                    
+                                }}>
+                                    <View style={{flexDirection:'row', marginTop:8, marginLeft:8}}>
+                                        <Text style={styles.textcontainer}>14 Feb 2021, </Text>
+                                        <Text style={styles.textcontainer}>1 Malam | </Text>
+                                        <Text style={styles.textcontainer}>1 Kamar, </Text>
+                                        <Text style={styles.textcontainer}>1 Dewasa</Text>
+                                        <TouchableOpacity style={{marginLeft:50}}>
+                                            <Text style={styles.textcontainer}>Ubah</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
                             </View>
                         </View>
-                        <View style={{
-                        flexDirection: "row",
-                        alignItems: "center",
-                        height: 40,
-                        padding: 0,
-                        marginLeft: 2,
-                        marginRight: 2,
-                        marginBottom: 5,
-                        marginTop: 5,
-                        borderWidth: 1,
-                        borderColor: '#161924',
-                        borderRadius: 60,
-                        }}>
-                            <Icon type={"FontAwesome"} name="search" fontSize={25} style={{marginLeft:8}} />
-                            <TextInput
-                                placeholder="Cari Hotel lain "
-                                placeholderTextColor={'#161924'}
-                                style={{
-                                    fontSize:20,
-                                    width: "90%",
-                                    padding:2,
-                                    marginLeft:10,
-                                }}
-                            />
+                        <ScrollView horizontal={true} style={{marginTop:10, marginLeft:10, flexDirection:'row'}}>
+                            <TouchableOpacity style={{
+                                borderWidth:1,
+                                borderRadius:30,
+                                width:responsiveWidth(30),
+                                height:responsiveHeight(5),
+                                alignItems:'center',
+                                justifyContent:'center',
+                                backgroundColor:'#229BD7',
+                                borderColor:'steelblue'
+                            }}>
+                                <Text style={styles.title}>Semua</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={{
+                                borderWidth:1,
+                                borderRadius:30,
+                                width:responsiveWidth(30),
+                                height:responsiveHeight(5),
+                                alignItems:'center',
+                                justifyContent:'center',
+                                backgroundColor:'#fff',
+                                borderColor:'steelblue',
+                                marginLeft:5
+                            }}>
+                                <Text style={styles.titleTab}>Hotel</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={{
+                                borderWidth:1,
+                                borderRadius:30,
+                                width:responsiveWidth(30),
+                                height:responsiveHeight(5),
+                                alignItems:'center',
+                                justifyContent:'center',
+                                backgroundColor:'#fff',
+                                borderColor:'steelblue',
+                                marginLeft:5
+                            }}>
+                                <Text style={styles.titleTab}>Villa</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={{
+                                borderWidth:1,
+                                borderRadius:30,
+                                width:responsiveWidth(30),
+                                height:responsiveHeight(5),
+                                alignItems:'center',
+                                justifyContent:'center',
+                                backgroundColor:'#fff',
+                                borderColor:'steelblue',
+                                marginLeft:5
+                            }}>
+                                <Text style={styles.titleTab}>Homestay</Text>
+                            </TouchableOpacity>
+                        </ScrollView>
+                        <View style={{flexDirection:'row', margin:10}}>
+                            <Icon type={'FontAwesome5'} name="map-marker-alt" style={{color:'#229BD7'}} />
+                            <Text style={[styles.fontContainer, {marginLeft:10, marginTop:10}]}>Banyuwangi, Jawa Timur</Text>
                         </View>
                         <ScrollView>
                             {/* <View style={{borderWidth:1, height:200, width:400, margin:10}}>
@@ -94,36 +146,138 @@ class CariHotel extends Component {
 
                             <TouchableOpacity onPress={goToDetailHotel}>
                             <Card>
-                                <View style={{flex:1, flexDirection:"row"}}>
-                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
+                                <View style={{flexDirection:"row", alignItems:'center'}}>
+                                    <Image source={ijen} style={{height:responsiveHeight(20), width:responsiveWidth(40)}} />
+                                    <View>
+                                        <Text style={[styles.textFont, {textAlign:'left'}]}>Jiwa Jawa Ijen Resort</Text>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Bintang 5 </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| 200m dari lokasiku</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.font, {textAlign:'center', color:'#00af87'}]}>TripAdvisor </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Luar Biasa, 20 Ulasan</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Gratis Sarapan </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Maks. 2 Orang</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontMoney, {textAlign:'center'}]}>Rp 727,000</Text>
+                                        </View>
+                                    </View>
                                 </View>                                      
                             </Card>
                             </TouchableOpacity>
                             
+                            <TouchableOpacity onPress={goToDetailHotel}>
                             <Card>
-                                <View style={{flex:1, flexDirection:"row"}}>
-                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
+                                <View style={{flexDirection:"row", alignItems:'center'}}>
+                                    <Image source={joglo} style={{height:responsiveHeight(20), width:responsiveWidth(40)}} />
+                                    <View>
+                                        <Text style={[styles.textFont, {textAlign:'left'}]}>Kampoeng Joglo Ijen</Text>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Bintang 5 </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| 200m dari lokasiku</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.font, {textAlign:'center', color:'#00af87'}]}>TripAdvisor </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Luar Biasa, 20 Ulasan</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Gratis Sarapan </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Maks. 2 Orang</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontMoney, {textAlign:'center'}]}>Rp 422,000</Text>
+                                        </View>
+                                    </View>
                                 </View>                                      
                             </Card>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={goToDetailHotel}>
                             <Card>
-                                <View style={{flex:1, flexDirection:"row"}}>
-                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
-                                </View>                                     
+                                <View style={{flexDirection:"row", alignItems:'center'}}>
+                                    <Image source={micasa} style={{height:responsiveHeight(20), width:responsiveWidth(40)}} />
+                                    <View>
+                                        <Text style={[styles.textFont, {textAlign:'left'}]}>Micasa Guest House</Text>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Bintang 5 </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| 200m dari lokasiku</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.font, {textAlign:'center', color:'#00af87'}]}>TripAdvisor </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Luar Biasa, 20 Ulasan</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Gratis Sarapan </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Maks. 2 Orang</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontMoney, {textAlign:'center'}]}>Rp 525,000</Text>
+                                        </View>
+                                    </View>
+                                </View>                                      
                             </Card>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={goToDetailHotel}>
                             <Card>
-                                <View style={{flex:1, flexDirection:"row"}}>
-                                    <Image source={cordoba} style={{height:200, width:200, alignItems:'center'}} />
-                                    <Text style={{fontSize:18, marginLeft:10}}>Hotel Cordoba{"\n"}Price :{"\n"}Rp.450.000,-</Text>
-                                </View>    
+                                <View style={{flexDirection:"row", alignItems:'center'}}>
+                                    <Image source={solong} style={{height:responsiveHeight(20), width:responsiveWidth(40)}} />
+                                    <View>
+                                        <Text style={[styles.textFont, {textAlign:'left'}]}>Villa Solong</Text>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Bintang 5 </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| 200m dari lokasiku</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.font, {textAlign:'center', color:'#00af87'}]}>TripAdvisor </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Luar Biasa, 20 Ulasan</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Gratis Sarapan </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Maks. 2 Orang</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontMoney, {textAlign:'center'}]}>Rp 576,000</Text>
+                                        </View>
+                                    </View>
+                                </View>                                      
                             </Card>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={goToDetailHotel}>
+                            <Card>
+                                <View style={{flexDirection:"row", alignItems:'center'}}>
+                                    <Image source={kokoon} style={{height:responsiveHeight(20), width:responsiveWidth(40)}} />
+                                    <View>
+                                        <Text style={[styles.textFont, {textAlign:'left'}]}>Hotel Kokoon Banyuwangi</Text>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Bintang 5 </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| 200m dari lokasiku</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.font, {textAlign:'center', color:'#00af87'}]}>TripAdvisor </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Luar Biasa, 20 Ulasan</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>Gratis Sarapan </Text>
+                                            <Text style={[styles.fontContainer, {textAlign:'center'}]}>| Maks. 2 Orang</Text>
+                                        </View>
+                                        <View style={{flexDirection:'row', marginLeft:10}}>
+                                            <Text style={[styles.fontMoney, {textAlign:'center'}]}>Rp 845,000</Text>
+                                        </View>
+                                    </View>
+                                </View>                                      
+                            </Card>
+                            </TouchableOpacity>
                         </ScrollView>
                     </View>
                 </Content>
             </Container>
-            </Drawer>
+            // </Drawer>
          );
     }
 }
@@ -151,6 +305,40 @@ const styles = StyleSheet.create({
       image: {
         width: 150,
         height: 150,
+      },
+
+      font:{
+          fontFamily:'BalooBhai-Regular'
+      },
+      textFont:{
+        fontFamily:'BalooBhai-Regular',
+        fontSize:responsiveFontSize(2),
+        marginLeft:10
+        },
+        fontContainer:{
+            fontFamily:'BalooBhai-Regular',
+            fontSize:responsiveFontSize(1.5),
+            color:'#808080',
+            },
+        fontMoney:{
+            fontFamily:'BalooBhai-Regular',
+            fontSize:responsiveFontSize(2),
+            color:'red',
+        },
+      textcontainer:{
+        fontFamily:'BalooBhai-Regular',
+        fontSize:responsiveFontSize(1.7),
+        color:'white'
+      },
+      titleTab:{
+        fontFamily:'BalooBhai-Regular',
+        fontSize:responsiveFontSize(2.5),
+        color:'#229BD7'
+      },
+      title:{
+        fontFamily:'BalooBhai-Regular',
+        fontSize:responsiveFontSize(2.5),
+        color:'white'
       },
     
     textModal: {

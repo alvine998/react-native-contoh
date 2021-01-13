@@ -71,7 +71,7 @@ function App() {
   return (
     <Provider store={storeRedux}>
         
-          <IndexChooseHotel/>
+          <Routes/>
         
     </Provider>
   );

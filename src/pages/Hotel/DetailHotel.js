@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import{Text, StyleSheet, Image, TextInput, ScrollView, ImageBackground} from 'react-native';
-import {Button, Label, Left, Body, Right, Container, Icon, Header,Title, View, Card, Footer, FooterTab} from 'native-base';
+import {Button,Drawer, Label, Left, Body, Right, Container, Icon, Header,Title, View, Card, Footer, FooterTab} from 'native-base';
 
 import hotel1 from '../../images/img-hotel/cordoba.webp';
 import hotel2 from '../../images/img-hotel/125011825.jpg';
@@ -16,12 +16,19 @@ import beach from '../../images/beach-chair.png';
 import bus from '../../images/bus.png';
 
 import { Actions } from 'react-native-router-flux';
+import SideBar from '../../components/Sidebar';
 
 
 
 
 class Detailhotel extends Component {
-    state = {  }
+    closeDrawer(){
+        this._drawer._root.close()     
+    };
+    openDrawer(){
+        this._drawer._root.open()
+    };
+
     render() { 
         const goToBack = () => {
             Actions.carihotel()
@@ -30,7 +37,14 @@ class Detailhotel extends Component {
             Actions.detailroom()
         }
 
-        return ( 
+        return (
+            <Drawer
+                ref={(ref) => {this._drawer = ref;}}
+                content={<SideBar navigator={this.navigator} />}
+                onClose={() => this.closeDrawer()}
+                side="right"
+                panOpenMask={.25}
+            >
             <Container>
                 <Header style={{backgroundColor:"#229BD7"}}>
                     <Left>
@@ -39,7 +53,11 @@ class Detailhotel extends Component {
                     <Body>
                         <Title>Detail Hotel</Title>
                     </Body>
-                    <Right/>
+                    <Right>
+                        <Button transparent onPress={() => this.openDrawer()}>
+                            <Icon type={"FontAwesome"} name="bars"/>
+                        </Button>
+                    </Right>
                 </Header>
                 <ScrollView>
                     <View style={{flex:1, flexDirection:"column"}}>
@@ -143,6 +161,7 @@ class Detailhotel extends Component {
                     </Right>
                 </Footer>
             </Container>
+            </Drawer>
          );
     }
 }
